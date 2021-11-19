@@ -7,7 +7,7 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-/* from Bulma */
+/* banner homepage */
 .home-banner {
     background-color: rgb(3, 106, 120);
     justify-content: center;
@@ -60,6 +60,19 @@ body {
 
 .border-black {
     border: 1px solid black !important;
+}
+
+/* modals homepage */
+
+.modalbanner {
+    background-color: #F6F6F6;
+    width: 100%;
+    height: 50px;
+}
+
+.modal-content {
+    background-color:rgb(3, 106, 120);
+    color: white;
 }
 
 /* -------------------------------- Media Queries */

@@ -10,9 +10,9 @@
 {% endblock %}
 
 {% block content %}
+<!-- Home banner -->
 <section class="text-center container-fluid">
     <div class="row">
-      <!-- Home banner -->
       <div class="col-12 col-lg-6 d-none d-lg-block home-banner mt-5">
         <div class="mt-5">
           <h1>Want to decorate?</h1>
@@ -30,5 +30,84 @@
         </a>
       </div>
     </div>
-  </section>
+</section>
+<!-- models -->
+<section>
+    <div class="row modalbanner text-center">
+        <div class="col-4 mt-2">
+            <div>
+                <h5 data-bs-toggle="modal" data-bs-target="#Modal-1">
+                    <i class="far fa-money-bill-alt"></i>
+                    Free delivery over $200
+                </h5>
+            </div>
+        </div>
+        <div class="col-4 mt-2">
+            <div>
+                <h5 data-bs-toggle="modal" data-bs-target="#Modal-2">
+                    <i class="fas fa-box"></i>
+                    Home installation
+                </h5>
+            </div>
+        </div>
+        <div class="col-4 mt-2">
+            <div>
+                <h5 data-bs-toggle="modal" data-bs-target="#Modal-3">
+                    <i class="fas fa-people-carry"></i>
+                    Lifetime warranty
+                </h5>
+            </div>
+        </div>
+    </div>
+    <!-- modals popup 1 -->
+    <div class="modal fade" id="Modal-1" tabindex="-1" aria-labelledby="Modal-1" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="Modal-1">Free Delivery over $200</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate exercitationem quasi fuga. 
+              Autem nobis dolore eveniet impedit dolorum assumenda cupiditate ab quas enim reiciendis. 
+              Saepe fugiat perferendis itaque voluptatem quis!
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- modals popup 2 -->
+    <div class="modal fade" id="Modal-2" tabindex="-1" aria-labelledby="Modal-2" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="Modal-2">Home installation</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate exercitationem quasi fuga. 
+              Autem nobis dolore eveniet impedit dolorum assumenda cupiditate ab quas enim reiciendis. 
+              Saepe fugiat perferendis itaque voluptatem quis!
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- modals popup 2 -->
+    <div class="modal fade" id="Modal-3" tabindex="-1" aria-labelledby="Modal-3" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="Modal-3">Lifetime warranty</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate exercitationem quasi fuga. 
+              Autem nobis dolore eveniet impedit dolorum assumenda cupiditate ab quas enim reiciendis. 
+              Saepe fugiat perferendis itaque voluptatem quis!
+            </div>
+          </div>
+        </div>
+    </div>
+</section>
+
+
 {% endblock %}
