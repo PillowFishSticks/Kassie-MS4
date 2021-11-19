@@ -5,8 +5,8 @@
                 All Products
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">By Price</a>
-                <a href="" class="dropdown-item ">By Category</a>
+                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
         </li>
@@ -16,10 +16,10 @@
                 Bedroom
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="bed-link">
-                <a href="" class="dropdown-item">Beds</a>
-                <a href="" class="dropdown-item">Nightstands</a>
-                <a href="" class="dropdown-item">Dressers</a>
-                <a href="" class="dropdown-item">All Bedroom</a>
+                <a href="{% url 'products' %}?category=beds" class="dropdown-item">Beds</a>
+                <a href="{% url 'products' %}?category=nightstands" class="dropdown-item">Nightstands</a>
+                <a href="{% url 'products' %}?category=dressers" class="dropdown-item">Dressers</a>
+                <a href="{% url 'products' %}?category=beds,nightstands,dressers" class="dropdown-item">All Bedroom</a>
             </div>
         </li>
 
@@ -28,10 +28,10 @@
                 Living Room
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="livingroom-link">
-                <a href="" class="dropdown-item">Sofas</a>
-                <a href="" class="dropdown-item">Chairs</a>
-                <a href="" class="dropdown-item">Tables</a>
-                <a href="" class="dropdown-item">All Living Room</a>
+                <a href="{% url 'products' %}?category=sofas" class="dropdown-item">Sofas</a>
+                <a href="{% url 'products' %}?category=chairs" class="dropdown-item">Chairs</a>
+                <a href="{% url 'products' %}?category=tables" class="dropdown-item">Tables</a>
+                <a href="{% url 'products' %}?category=sofas,chairs,tables" class="dropdown-item">All Living Room</a>
             </div>
         </li>
 
@@ -40,10 +40,10 @@
                 Dining Room
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="diningroom-link">
-                <a href="" class="dropdown-item">Dining Chairs</a>
-                <a href="" class="dropdown-item">Dining Tables</a>
-                <a href="" class="dropdown-item">Bars</a>
-                <a href="" class="dropdown-item">All Dining Room</a>
+                <a href="{% url 'products' %}?category=dining_chairs" class="dropdown-item">Dining Chairs</a>
+                <a href="{% url 'products' %}?category=dining_tables" class="dropdown-item">Dining Tables</a>
+                <a href="{% url 'products' %}?category=bars" class="dropdown-item">Bars</a>
+                <a href="{% url 'products' %}?category=dining_chairs,dining_tables,bars" class="dropdown-item">All Dining Room</a>
             </div>
         </li>
 
@@ -52,10 +52,10 @@
                 Office
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="office-link">
-                <a href="" class="dropdown-item">Desks</a>
-                <a href="" class="dropdown-item">Bookcases</a>
-                <a href="" class="dropdown-item">Office Chairs</a>
-                <a href="" class="dropdown-item">All Office</a>
+                <a href="{% url 'products' %}?category=desks" class="dropdown-item">Desks</a>
+                <a href="{% url 'products' %}?category=bookcases" class="dropdown-item">Bookcases</a>
+                <a href="{% url 'products' %}?category=office_chairs" class="dropdown-item">Office Chairs</a>
+                <a href="{% url 'products' %}?category=desks,bookcases,office_chairs" class="dropdown-item">All Office</a>
             </div>
         </li>
         <li class="nav-item dropdown">
@@ -63,10 +63,10 @@
                 Garden
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="garden-link">
-                <a href="" class="dropdown-item">Garden Sofas</a>
-                <a href="" class="dropdown-item">Garden Chairs</a>
-                <a href="" class="dropdown-item">Garden Tables</a>
-                <a href="" class="dropdown-item">All Garden</a>
+                <a href="{% url 'products' %}?category=garden_sofas" class="dropdown-item">Garden Sofas</a>
+                <a href="{% url 'products' %}?category=garden_chairs" class="dropdown-item">Garden Chairs</a>
+                <a href="{% url 'products' %}?category=garden_tables" class="dropdown-item">Garden Tables</a>
+                <a href="{% url 'products' %}?category=garden_tables,garden_chairs,garden_sofas" class="dropdown-item">All Garden</a>
             </div>
         </li>
         <li class="nav-item dropdown">
