@@ -1,0 +1,87 @@
+html {
+    height: 100%;
+}
+
+body {
+    color: #555;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* from Bulma */
+.home-banner {
+    background-color: rgb(3, 106, 120);
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    color:white;
+    height: 600px;
+}
+  
+.home-banner p {
+    font-size: 18px;
+}
+
+.home-banner h1 {
+    padding-top: 150px;
+}
+
+.home-banner-image img {
+    height: 600px; 
+    width: 100%; 
+}
+
+.btn-black {
+    background: white;
+    color: black;
+    border: 2px solid black;
+  }
+
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+      background: black;
+      color: white;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: #222;
+    color: white;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
+}
