@@ -75,6 +75,13 @@ body {
     color: white;
 }
 
+
+/* products badeges */
+
+a.category-badge > span.badge:hover {
+    background: black !important;
+    color: white !important;
+}
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
