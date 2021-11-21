@@ -75,6 +75,14 @@ body {
     color: white;
 }
 
+.pointer:hover {
+    color:blue;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
 
 /* products badeges */
 
