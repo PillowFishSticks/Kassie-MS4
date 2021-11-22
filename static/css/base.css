@@ -108,6 +108,13 @@ a.category-badge > span.badge:hover {
     height: 2px;
 }
 
+/* --- Shopping bag --- */
+.bag-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
 
 /* -------------------------------- Media Queries */
 
