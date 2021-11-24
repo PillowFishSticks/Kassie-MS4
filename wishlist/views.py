@@ -49,16 +49,22 @@ def add_product_to_wishlist(request, item_id):
         Renders the product detail page
     """
     product = get_object_or_404(Product, pk=item_id)
+    wishlist = None
+
+    #wishlist = get_object_or_404(Wishlist, username=request.user)
     try:
-        wishlist = get_object_or_404(Wishlist, username=request.user.id)
+        wishlist = get_object_or_404(Wishlist, username=request.user)
     except Http404:
-        wishlist = wishlist.objects.create(username=request.user)
+        wishlist = Wishlist.objects.create(username=request.user)
+
     if product in wishlist.products.all():
         messages.info(request, 'The product is '
                                'already in your wishlist!')
     else:
         wishlist.products.add(product)
         messages.info(request, 'Added the product to your wishlist')
+
+   
     return redirect(reverse('product_detail', args=[item_id]))
 
 
