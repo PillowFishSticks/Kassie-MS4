@@ -119,6 +119,16 @@ a.category-badge > span.badge:hover {
     overflow-y: auto;
 }
 
+/* --- wishlist --- */
+
+.wishlist {
+    font-size: 1.6rem;
+    padding-left: 15px;
+}
+.wishlist-remove {
+    cursor: pointer;
+}
+
 
 /* -------------------------------- Media Queries */
 

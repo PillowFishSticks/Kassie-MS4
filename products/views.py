@@ -4,6 +4,13 @@ from django.db.models import Q
 from .models import Product, Category
 from django.db.models.functions import Lower
 from .forms import ProductForm
+from wishlist.models import Wishlist
+from django.http import Http404
+
+
+# Create your views here.
+
+
 
 # Create your views here.
 
@@ -62,8 +69,15 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
 
+    try:
+        wishlist = get_object_or_404(Wishlist, username=request.user.id)
+    except Http404:
+        is_product_in_wishlist = False
+    else:
+        is_product_in_wishlist = bool(product in wishlist.products.all())
     context = {
         'product': product,
+        'is_product_in_wishlist': is_product_in_wishlist,
     }
 
     return render(request, 'products/product_detail.html', context)

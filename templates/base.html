@@ -83,20 +83,38 @@
                           {% endif %}
                       </div>
                   </li>
+                  <!-- wishlist -->
                   <li class="list-inline-item">
-                      <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
-                          <div class="text-center">
-                              <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                              <p class="my-0">
-                                  {% if grand_total %}
-                                      ${{ grand_total|floatformat:2 }}
-                                  {% else %}
-                                      $0.00
-                                  {% endif %}
-                              </p>
-                          </div>
-                      </a>
-                  </li>
+                    <a class="{% if wishlist_count %} font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_product_wishlist' %}">
+                        <div class="text-center">
+                            {% if wishlist_count %}
+                                <div><i class="fas fa-heart"></i></div>
+                                <p class="my-0">
+                                    Wishlist ({{ wishlist_count }})
+                                </p>
+                            {% else %}
+                               <div><i class="fas fa-heart"></i></div>
+                                <p class="my-0">
+                                    Wishlist (0)
+                                </p>
+                            {% endif %}
+                        </div>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
+                        <div class="text-center">
+                            <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                            <p class="my-0">
+                                {% if grand_total %}
+                                    ${{ grand_total|floatformat:2 }}
+                                {% else %}
+                                    $0.00
+                                {% endif %}
+                            </p>
+                        </div>
+                    </a>
+                </li>
               </ul>
           </div>
           <div class="col-12 col-lg-4 my-auto py-1 py-lg-0"></div>
