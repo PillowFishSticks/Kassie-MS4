@@ -41,7 +41,7 @@
   </head>
   <body>
     <header class="container-fluid fixed-top">
-      <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
+      <div id="topnav" class="row bg-white  d-none d-lg-flex">
           <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
               <a href="{% url 'home' %}" class="nav-link main-logo-link">
                   <h2 class="logo-font text-black my-0"><strong>Kassie</strong></h2>
@@ -77,7 +77,6 @@
                                   <a href="{% url 'manage_inspo_items' %}" class="dropdown-item">inspo Item Management</a>
                               {% endif %}
                               <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-                              <li class="mb-2"><a href="{% url 'inspo_items' %}" class="font-black">Inspo</a></li>
                               <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                           {% else %}
                               <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>

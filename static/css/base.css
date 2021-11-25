@@ -7,6 +7,10 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+.navbar {
+    display: unset;
+}
+
 /* banner homepage */
 .home-banner {
     background-color: rgb(3, 106, 120);
