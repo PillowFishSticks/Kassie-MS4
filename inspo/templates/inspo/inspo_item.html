@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extra_title %}inspo Item{% endblock %}
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col">
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block content %}
+    <div class="overlay"></div>
+        <div class="section-holder">
+            <div class="form-holder-lg">
+                <div class="row">
+                    <div class="col">
+                        <h1 class="header-font mb-2 pt-4 text-center black-white">{{ inspo_item.title}}</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="text-center">
+                            {% if inspo_item.image %}
+                                <img class="inspo-card-detail-img-top image-fluid" src="{{ inspo_item.image.url }}" alt="{{ inspo_item.title }}" />
+                            {% else %}
+                                <img class="inspo-card-detail-img-top image-fluid" src="{{ inspo_item.image_url }}" alt="{{ inspo_item.title }}" />
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="my-2">
+                                <p class="card-text">{{ inspo_item.inspo_item_text }}</p>
+                                <p class="text-muted">Posted By: {{ inspo_item.user }} on the {{ inspo_item.create_date }}</p>
+                            </div>
+                            {% if inspo_item.user == request.user or request.user.is_superuser %}
+                                <a class="btn green-btn" href="{% url 'edit_inspo_item' inspo_item.id %}" role="button">Edit</a>
+                                <button type="button" class="btn black-btn" data-bs-toggle="modal"
+                                data-bs-target="#deleteInspoItem">
+                                Delete</button>
+                                <!-- Delete Button Modal -->
+                                <div class="modal fade" id="deleteInspoItem" tabindex="-1" role="dialog" aria-labelledby="deleteInspoItem" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                                    <div class="modal-header">
+                                                <h4>Delete inspo Item {{ inspo_item.title }} </h4>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                        You are about to delete Title ({{ inspo_item.title }}) 
+                                            </div>
+                                            <div class="modal-footer">
+                                                <!-- Close and delete product buttons-->
+                                                <button type="button" class="btn black-btn" data-bs-dismiss="modal">Close</button>
+                                                <a href="{% url 'delete_inspo_item' inspo_item.id %}" class="btn red-btn">Delete</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}

@@ -223,6 +223,64 @@ a.category-badge > span.badge:hover {
     border-radius: 0;
 }
 
+/* --- inspo page --- */
+.card-img-top {
+    height: 300px;
+    border: 0;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.inspo-items {
+    background-color: whitesmoke;
+}
+
+.inspo-card {
+    width: 400px;
+    border: 0;
+    margin: auto;
+    margin-bottom: 10px;
+}
+.inspo-card-img-top {
+    width: 400px ;
+    height: 400px ;
+    border: 0;
+    margin: auto;
+    margin-bottom: 10px;
+}
+/* --- inspo item --- */
+.inspo-card-detail-img-top {
+    width: 500px ;
+    height: 500px ;
+}
+/* --- Shopping bag --- */
+.bag-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+/* ----- End of Styling ----- */
+/* ----- Start of Media Queries ----- */
+/* --- Greater than 1200px --- */
+@media screen and (max-width: 1200px) {
+    .container {
+      max-width: 80%;
+    }
+    /* --- inspo --- */
+    .inspo-card {
+        width: 300px;
+    }
+    .inspo-card-img-top {
+        height: 300px;
+        width: 300px;
+    }
+    /* --- inspo item detail --- */
+    .inspo-card-detail-img-top {
+        width: 400px ;
+        height: 400px ;
+    }
+  }
+
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
