@@ -11,6 +11,18 @@ body {
     display: unset;
 }
 
+/* Style the review dropdown button */
+#review-options,
+#no-reviews {
+    color: #ccc;
+}
+ 
+#review-options:hover,
+#review-options:active,
+#review-options:focus {
+    color: #FFD700;
+}
+
 /* banner homepage */
 .home-banner {
     background-color: rgb(3, 106, 120);
