@@ -6,6 +6,8 @@ from django.db.models.functions import Lower
 from .forms import ProductForm
 from wishlist.models import Wishlist
 from django.http import Http404
+from reviews.models import Review
+from reviews.forms import ReviewForm
 
 
 # Create your views here.
@@ -68,17 +70,31 @@ def product_detail(request, product_id):
     """ A view to show individual product details """
 
     product = get_object_or_404(Product, pk=product_id)
+    reviews_raw = Review.objects.filter(product=product)
+    reviews = reviews_raw.order_by('-date_created')
+    review_form = ReviewForm()
 
-    try:
-        wishlist = get_object_or_404(Wishlist, username=request.user.id)
-    except Http404:
-        is_product_in_wishlist = False
+    if request.user.is_authenticated:
+        user = UserProfile.objects.get(user=request.user)
+        try:
+            wishlist = get_object_or_404(Wishlist, username=request.user.id)
+            product_review = Review.objects.get(user=user, product=product)
+            edit_review_form = ReviewForm(instance=product_review)
+            # If so they will not be able to leave another
+            review_form = None
+        except Http404:
+            is_product_in_wishlist = False
+            edit_review_form = None
     else:
         is_product_in_wishlist = bool(product in wishlist.products.all())
+        edit_review_form = None
     context = {
         
         'product': product,
         'is_product_in_wishlist': is_product_in_wishlist,
+        'reviews': reviews,
+        'review_form': review_form,
+        'edit_review_form': edit_review_form,
     }
 
     return render(request, 'products/product_detail.html', context)
