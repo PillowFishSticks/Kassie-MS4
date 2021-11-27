@@ -8,6 +8,7 @@ from wishlist.models import Wishlist
 from django.http import Http404
 from reviews.models import Review
 from reviews.forms import ReviewForm
+from profiles.models import UserProfile
 
 
 # Create your views here.
@@ -76,15 +77,15 @@ def product_detail(request, product_id):
 
     if request.user.is_authenticated:
         user = UserProfile.objects.get(user=request.user)
-    try:
-        wishlist = get_object_or_404(Wishlist, username=request.user.id)
-        product_review = Review.objects.get(user=user, product=product)
-        edit_review_form = ReviewForm(instance=product_review)
+        try:
+            wishlist = get_object_or_404(Wishlist, username=request.user.id)
+            product_review = Review.objects.get(user=user, product=product)
+            edit_review_form = ReviewForm(instance=product_review)
             # If so they will not be able to leave another
-        review_form = None
-    except Http404:
-        is_product_in_wishlist = False
-        edit_review_form = None
+            review_form = None
+        except Http404:
+            is_product_in_wishlist = False
+            edit_review_form = None
     else:
         is_product_in_wishlist = bool(product in wishlist.products.all())
         edit_review_form = None
