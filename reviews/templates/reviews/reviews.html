@@ -7,8 +7,12 @@
             <hr>
                 {% if request.user.username == review.user.user.username %}
                 <div class="mt-2">
-                    <a href="" data-toggle="modal" data-target="#editReview" class="btn btn-yellow">Edit</a>
-                    <a href="#" data-toggle="modal" data-target="#deleteReview" class="btn btn-blue">Delete</a>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editReview">
+                        Edit
+                      </button>                      
+                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteReview">
+                        Delete
+                      </button>                      
                     <hr>
                 </div> 
                 <div class="modal fade" id="editReview" tabindex="-1" role="dialog" aria-labelledby="editReviewLabel" aria-hidden="true">
@@ -16,20 +20,20 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h4 class="modal-title" id="editReviewLabel">Edit Review</h4>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                                </button>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
-                            <form action="{% url 'edit_review' review.pk %}" method="POST">
+                            <div>
                                 <div class="modal-body">
-                                    {% csrf_token %}
-                                    {{ edit_review_form|crispy }}
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-yellow" data-dismiss="modal" data-target="#editReview">Cancel</button>
-                                    <button type="submit" class="btn btn-blue ml-2">Submit</button>
+                                    <form action="{% url 'edit_review' review.pk %}" method="POST">
+                                        {% csrf_token %}
+                                        {{ edit_review_form|crispy }}
+                                    </form> 
+                                </div> 
                             </div>
-                            </form>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-blue ml-2">Submit</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -38,15 +42,13 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <h4 class="modal-title" id="deleteReviewLabel">Delete review</h4>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                            </button>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <h5>Are you sure you want to delete your review?</h5>
                         </div>
                         <div class="modal-footer">
-                            <a href="#" class="btn btn-yellow" data-dismiss="modal" data-target="#deleteReview">Cancel</a>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                             <a class="btn btn-blue ml-2" href="{% url 'delete_review' review.pk %}">Delete</a>
                         </div>
                     </div>
