@@ -11,12 +11,6 @@ from reviews.forms import ReviewForm
 from profiles.models import UserProfile
 
 
-# Create your views here.
-
-
-
-# Create your views here.
-
 def all_products(request):
     """ A view to show all products, including sorting and search queries """
 
@@ -79,7 +73,7 @@ def product_detail(request, product_id):
         user = UserProfile.objects.get(user=request.user)
         try:
             wishlist = get_object_or_404(Wishlist, username=request.user.id)
-            product_review = Review.objects.get(user=user, product=product)
+            product_review = get_object_or_404(Review, pk=product_id)
             edit_review_form = ReviewForm(instance=product_review)
             # If so they will not be able to leave another
             review_form = None
@@ -87,12 +81,9 @@ def product_detail(request, product_id):
             is_product_in_wishlist = False
             edit_review_form = None
     else:
-        is_product_in_wishlist = bool(product in wishlist.products.all())
         edit_review_form = None
     context = {
-        
         'product': product,
-        'is_product_in_wishlist': is_product_in_wishlist,
         'reviews': reviews,
         'review_form': review_form,
         'edit_review_form': edit_review_form,
