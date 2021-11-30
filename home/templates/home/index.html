@@ -109,4 +109,53 @@
     </div>
 </section>
 
+<section class="text-center container mt-5">
+  <!-- Search by category buttons -->
+  <div class="row category">
+    <h2 class="text-styleheading mb-5">Search by category</h2>
+    <!-- Bedroom -->
+    <div class="col-6 col-md-4 col-lg-2 text-center">
+      <a href="{% url 'products' %}?category=beds,nightstands,dressers">
+        <img src="media/myhome.jpg" class="imagebuttons" alt="Bedroom">
+        <p class="mt-2 mb-4">Bedroom</p>
+      </a>
+    </div>
+    <!-- Living room -->
+    <div class="col-6 col-md-4 col-lg-2 text-center">
+      <a href="{% url 'products' %}?category=sofas,chairs,tables">
+        <img src="media/myhome.jpg" class="imagebuttons" alt="Living room">
+        <p class="mt-2 mb-4">Living room</p>
+      </a>
+    </div>
+    <!-- Dining room -->
+    <div class="col-6 col-md-4 col-lg-2 text-center">
+      <a href="{% url 'products' %}?category=dining_chairs,dining_tables,bars">
+        <img src="media/myhome.jpg" class="imagebuttons" alt="Dining room">
+        <p class="mt-2 mb-4">Dining room</p>
+      </a>
+    </div>
+    <!-- Office -->
+    <div class="col-6 col-md-4 col-lg-2 text-center">
+      <a href="{% url 'products' %}?category=desks,bookcases,office_chairs">
+        <img src="media/myhome.jpg" class="imagebuttons" alt="Office">
+        <p class="mt-2 mb-4">Office</p>
+      </a>
+    </div>
+    <!-- Garden -->
+    <div class="col-6 col-md-4 col-lg-2 text-center">
+      <a href="{% url 'products' %}?category=garden_tables,garden_chairs,garden_sofas">
+        <img src="media/myhome.jpg" class="imagebuttons" alt="Garden">
+        <p class="mt-2 mb-4">Garden</p>
+      </a>
+    </div>
+    <!-- Specials -->
+    <div class="col-6 col-md-4 col-lg-2 text-center">
+      <a href="#">
+        <img src="media/myhome.jpg" class="imagebuttons" alt="Specials">
+        <p class="mt-2 mb-4">Specials</p>
+      </a>
+    </div>
+  </div>
+</section>
+
 {% endblock %}

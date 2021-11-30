@@ -103,6 +103,20 @@ input[name='q']::placeholder {
     color: #aab7c4;
 }
 
+/* buttons homepage */
+
+.imagebuttons {
+    height: 170px;
+    width: 170px;
+    border-radius: 50%;
+}
+
+.category a {
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+}
 
 /* products badeges */
 
