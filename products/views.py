@@ -73,22 +73,24 @@ def product_detail(request, product_id):
         user = UserProfile.objects.get(user=request.user)
         try:
             wishlist = get_object_or_404(Wishlist, username=request.user.id)
-            product_review = get_object_or_404(Review, pk=product_id)
-            edit_review_form = ReviewForm(instance=product_review)
-            # If so they will not be able to leave another
+            user_profile = get_object_or_404(UserProfile, user=request.user)
+            review = get_object_or_404(Review, product=product, user=user_profile)
+            edit_review_form = ReviewForm(instance=review)
+    
             review_form = None
         except Http404:
             is_product_in_wishlist = False
             edit_review_form = None
     else:
         edit_review_form = None
+
     context = {
         'product': product,
         'reviews': reviews,
         'review_form': review_form,
         'edit_review_form': edit_review_form,
     }
-
+    
     return render(request, 'products/product_detail.html', context)
 
 def add_product(request):

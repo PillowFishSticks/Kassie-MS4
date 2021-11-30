@@ -24,15 +24,13 @@
                             </div>
                             <div>
                                 <div class="modal-body">
-                                    <form action="{% url 'edit_review' review.pk %}" method="POST">
+                                    <form action="{% url 'edit_review' review.pk %}" method="POST" enctype="multipart/form-data">
                                         {% csrf_token %}
                                         {{ edit_review_form|crispy }}
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-blue ml-2">Submit</button>
                                     </form> 
-                                </div> 
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-blue ml-2">Submit</button>
+                                </div>
                             </div>
                         </div>
                     </div>
