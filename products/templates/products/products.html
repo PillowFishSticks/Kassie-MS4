@@ -74,7 +74,12 @@
                                         </div>
                                         {% endif %}
                                         <div class="col">
-                                            <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
+                                            {% if product.onsale %}
+                                                <p class="mb-0 text-left item-price font-weight-bold"><s>Was ${{product.price}}</s></p>
+                                                <p class="mb-0 text-left item-sale-price font-weight-bold">Now is ${{product.onsale_price}}</p>
+                                            {% else %}
+                                                <p class="mb-0 text-left item-price font-weight-bold">${{product.price}}</p>
+                                            {% endif %}
                                         </div>
                                         {% if request.user.is_superuser %}
                                         <div class="ml-3">
