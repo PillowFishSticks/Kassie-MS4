@@ -11,6 +11,10 @@ body {
     display: unset;
 }
 
+#topnav .row {
+    background-color: #F5F5F5;
+}
+
 /* Style the review dropdown button */
 #review-options,
 #no-reviews {
