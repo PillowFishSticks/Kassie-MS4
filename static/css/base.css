@@ -99,11 +99,12 @@ body {
 }
 
 .pointer:hover {
-    color:blue;
+    color:rgb(3, 106, 120);
 }
 
 .pointer {
     cursor: pointer;
+    font-size: 16px;
 }
 
 input[name='q']::placeholder {
