@@ -87,14 +87,14 @@
                   <!-- wishlist -->
                   <li class="list-inline-item">
                     <a class="{% if wishlist_count %} font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_product_wishlist' %}">
-                        <div class="text-center">
+                        <div class="text-center text-black">
                             {% if wishlist_count %}
                                 <div><i class="fas fa-heart fa-lg"></i></div>
                                 <p class="my-0">
                                     Wishlist ({{ wishlist_count }})
                                 </p>
                             {% else %}
-                               <div><i class="fas fa-heart"></i></div>
+                               <div><i class="fas fa-heart fa-lg"></i></div>
                                 <p class="my-0">
                                     Wishlist (0)
                                 </p>
@@ -104,7 +104,7 @@
                 </li>
                 <li class="list-inline-item">
                     <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
-                        <div class="text-center">
+                        <div class="text-center text-black">
                             <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                             <p class="my-0">
                                 {% if grand_total %}
@@ -159,6 +159,8 @@
       <script src="{% static 'js/scripts.js' %}"></script>
       <script src="{% static 'js/toast.js' %}"></script>
       {% endblock %}
+
+      {% include 'includes/footer.html' %}
 
   </body>
 </html>

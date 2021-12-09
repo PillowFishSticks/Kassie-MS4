@@ -1,0 +1,61 @@
+<footer id="footer" class="container-fluid mx-auto">
+    <div class="row mx-auto footer-width" style="width:90%;">
+        <div class="col-12 col-sm-6 col-lg-3 footer-link">
+        <ul>
+            <a href="{% url 'home' %}" class="nav-link main-logo-link">
+                <h2 class="logo-font mt-4"><strong>Kassie</strong></h2>
+            </a>
+            <a class="social-icon" href="https://www.facebook.com/" target="_blank">
+                <i class="fab fa-facebook-square fa-2x ml-5 mb-3"></i>
+            </a>
+            <a class="social-icon" href="https://www.instagram.com/" target="_blank">
+                <i class="fab fa-instagram-square fa-2x ml-3"></i>
+            </a><br>
+            <a class="social-icon" href="https://www.pinterest.com/" target="_blank">
+                <i class="fab fa-pinterest-square fa-2x ml-5"></i>
+            </a>
+            <a class="social-icon" href="https://twitter.com/" target="_blank">
+                <i class="fab fa-twitter-square fa-2x ml-3"></i>
+            </a>
+        </ul>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3 footer-link">
+            <h5 class="text-uppercase mt-5"><strong>Contact us</strong></h5>
+            <ul>
+                <li class="footer-item">Sales@kassie.com</li>
+                <li class="footer-item">Tel: 021 531 0547</li>
+            </ul>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3 footer-link">
+            <h5 class="text-uppercase mt-5"><strong>Furniture</strong></h5>
+            <ul>
+                <li class="footer-item"><a href="{% url 'products' %}?category=beds,nightstands,dressers" class="dropdown-item">Bedroom</a></li>
+                <li class="footer-item"><a href="{% url 'products' %}?category=sofas,chairs,tables" class="dropdown-item">Living Room</a></li>
+                <li class="footer-item"><a href="{% url 'products' %}?category=dining_chairs,dining_tables,bars" class="dropdown-item">Dining Room</a></li>
+                <li class="footer-item"><a href="{% url 'products' %}?category=desks,bookcases,office_chairs" class="dropdown-item">Office</a></li>
+                <li class="footer-item"><a href="{% url 'products' %}?category=garden_tables,garden_chairs,garden_sofas" class="dropdown-item">Garden</a></li>
+                <li class="footer-item"><a href="{% url 'products' %}?category=all_specials" class="dropdown-item">Specials</a></li>
+            </ul>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3 footer-link">
+            <h5 class="text-uppercase mt-5"><strong>My account</strong></h5>
+            <ul>
+                {% if request.user.is_authenticated %}
+                {% if request.user.is_superuser %}
+                    <li class="footer-item"><a href="{% url 'add_product' %}">Item Management</a></li>
+                {% endif %}
+                    <li class="footer-item"><a href="{% url 'profile' %}">My Profile</a></li>
+                    <li class="footer-item"><a href="{% url 'account_logout' %}">Logout</a></li>
+                {% else %}
+                    <li class="footer-item"><a href="{% url 'account_signup' %}">Register</a></li>
+                    <li class="footer-item"><a href="{% url 'account_login' %}">Login</a></li>
+                {% endif %}
+        </div>
+        <div class="col-12 text-center mb-5 mt-5">
+            <small>© Kassie 2022 <span id="copyright-year"></span></small>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</footer>
