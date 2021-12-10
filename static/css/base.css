@@ -121,11 +121,10 @@ input[name='q']::placeholder {
 /* buttons homepage */
 
 .imagebuttons {
-    height: 170px;
-    width: 170px;
-    border-radius: 50%;
+    height: 150px;
+    width: 200px;
 }
-
+  
 .category a {
     color: black;
     font-family: 'Roboto', sans-serif;
