@@ -1,1 +1,1 @@
-web: gunicorn kassie.wsgi:application
+web: gunicorn Kassie_MS4.wsgi:application
