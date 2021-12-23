@@ -3,7 +3,7 @@
         <div class="col-12 col-sm-6 col-lg-3 footer-link">
         <ul>
             <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                <h2 class="logo-font mt-4"><strong>Kassie</strong></h2>
+                <h2 class="logo-font text-uppercase mt-4"><strong>Kassie</strong></h2>
             </a>
             <a class="social-icon" href="https://www.facebook.com/" target="_blank">
                 <i class="fab fa-facebook-square fa-2x ml-5 mb-3"></i>
@@ -29,12 +29,12 @@
         <div class="col-12 col-sm-6 col-lg-3 footer-link">
             <h5 class="text-uppercase mt-5"><strong>Furniture</strong></h5>
             <ul>
-                <li class="footer-item"><a href="{% url 'products' %}?category=beds,nightstands,dressers" class="dropdown-item">Bedroom</a></li>
-                <li class="footer-item"><a href="{% url 'products' %}?category=sofas,chairs,tables" class="dropdown-item">Living Room</a></li>
-                <li class="footer-item"><a href="{% url 'products' %}?category=dining_chairs,dining_tables,bars" class="dropdown-item">Dining Room</a></li>
-                <li class="footer-item"><a href="{% url 'products' %}?category=desks,bookcases,office_chairs" class="dropdown-item">Office</a></li>
-                <li class="footer-item"><a href="{% url 'products' %}?category=garden_tables,garden_chairs,garden_sofas" class="dropdown-item">Garden</a></li>
-                <li class="footer-item"><a href="{% url 'products' %}?category=all_specials" class="dropdown-item">Specials</a></li>
+                <li class="footer-item"><a href="{% url 'products' %}?category=beds,nightstands,dressers">Bedroom</a></li>
+                <li class="footer-item"><a href="{% url 'products' %}?category=sofas,chairs,tables">Living Room</a></li>
+                <li class="footer-item"><a href="{% url 'products' %}?category=dining_chairs,dining_tables,bars">Dining Room</a></li>
+                <li class="footer-item"><a href="{% url 'products' %}?category=desks,bookcases,office_chairs">Office</a></li>
+                <li class="footer-item"><a href="{% url 'products' %}?category=garden_tables,garden_chairs,garden_sofas">Garden</a></li>
+                <li class="footer-item"><a href="{% url 'products' %}?category=all_specials">Specials</a></li>
             </ul>
         </div>
         <div class="col-12 col-sm-6 col-lg-3 footer-link">
@@ -51,7 +51,7 @@
                     <li class="footer-item"><a href="{% url 'account_login' %}">Login</a></li>
                 {% endif %}
         </div>
-        <div class="col-12 text-center mb-5 mt-5">
+        <div class="col-12 text-center mb-2 mt-5">
             <small>© Kassie 2021<span id="copyright-year"></span></small>
         </div>
     </div>
