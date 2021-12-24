@@ -7,6 +7,11 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+hr {
+    margin: auto;
+    text-align: center;
+}
+
 /* Navbar */
 .navbar {
     display: unset;
@@ -177,6 +182,14 @@ input[name='q']::placeholder {
 a.category-badge > span.badge:hover {
     background: black !important;
     color: white !important;
+}
+
+.item-sale-price, .item-price {
+    display: inline-block;
+}
+
+.item-sale-price {
+    color: #800020;
 }
 
 /* toasts */

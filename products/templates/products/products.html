@@ -19,7 +19,7 @@
                     <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ c.friendly_name }}</span>
                 </a>
             {% endfor %}
-            <hr class="w-100 mb-1">
+            <div><hr class="w-50 mb-1 mt-3"></div>
         </div>
     </div>
     <div class="row">
@@ -62,14 +62,14 @@
                             </a>
                             {% endif %}
                             <div class="card-body pb-0">
-                                <p class="mb-0">{{ product.name }}</p>
+                                <p class="mb-0 text-black font-weight-bold">{{ product.name }}</p>
                             </div>
                             <div class="card-footer bg-white pt-0 border-0 text-left">
-                                <div class="row">
+                                <div class="row mb-5">
                                     <div class="col">
                                         {% if product.onsale %}
-                                            <p class="mb-0 text-left item-price font-weight-bold"><s>Was ${product.price }}</s></p>
-                                            <p class="mb-0 text-left item-sale-price font-weight-bold">Now is ${{product.onsale_price }}</p>
+                                            <p class="mb-0 text-left item-price"><s>${{product.price }}</s></p>
+                                            <p class="mb-0 text-left item-sale-price">${{product.onsale_price }}</p>
                                         {% else %}
                                             <p class="mb-0 text-left item-price font-weight-bold">${{product.price }}</p>
                                         {% endif %}
