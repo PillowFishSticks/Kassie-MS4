@@ -7,6 +7,12 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+.page-banner {
+    padding: 2rem;
+    background-color: rgb(3, 106, 120);
+    color: black;
+  } 
+
 hr {
     margin: auto;
     text-align: center;
@@ -110,6 +116,20 @@ footer a i:hover {
 .btn-black:focus {
       background: white;
       color: black;
+}
+
+.btn-outline-black {
+    background: white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 0%;
+}
+
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+      background: #222;
+      color: white;
 }
 
 .shop-now-button:hover,
