@@ -109,6 +109,7 @@ footer a i:hover {
 .btn-black {
     background: #222;
     color: white;
+    border-radius: 0%;
   }
 
 .btn-black:hover,
