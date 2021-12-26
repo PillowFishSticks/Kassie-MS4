@@ -19,7 +19,7 @@ Bag
 <div class="container bag-container mb-2">
     <div class="row">
         <div class="col">
-            <h2 class="page-banner mt-4 mb-4">Shopping Bag</h2>
+            <h2 class="page-banner text-white mt-4 mb-4">Shopping Bag</h2>
         </div>
     </div>
 </div>
@@ -60,9 +60,9 @@ Bag
                                                 <div class="quantity input-group">
                                                     Qty:
                                                     <div class="input-group-prepend">
-                                                        <button class="decrement-qty btn btn-sm btn-black rounded-0"
-                                                            data-item_id="{{ item.product_id }}"
-                                                            id="decrement-qty_{{ item.product_id }}">
+                                                        <button class="decrement-qty btn btn-sm btn-outline-black rounded-0"
+                                                            data-item_id="{{ item.item_id }}"
+                                                            id="decrement-qty_{{ item.item_id }}">
                                                             <span>
                                                                 <i class="fas fa-minus fa-sm"></i>
                                                             </span>
@@ -70,12 +70,12 @@ Bag
                                                     </div>
                                                     <input class="qty_input" type="number" name="quantity"
                                                         value="{{ item.quantity }}" min="1" max="99"
-                                                        data-item_id="{{ item.product_id }}"
-                                                        id="id_qty_{{ item.product_id }}">
+                                                        data-item_id="{{ item.item_id }}"
+                                                        id="id_qty_{{ item.item_id }}">
                                                     <div class="input-group-append">
-                                                        <button class="increment-qty btn btn-sm btn-black rounded-0"
+                                                        <button class="increment-qty btn btn-sm btn-outline-black rounded-0"
                                                             data-item_id="{{ item.product_id }}"
-                                                            id="increment-qty_{{ item.product_id }}">
+                                                            id="increment-qty_{{ item.item_id }}">
                                                             <span>
                                                                 <i class="fas fa-plus fa-sm"></i>
                                                             </span>
@@ -92,7 +92,7 @@ Bag
                                     </div>
                                     <div class="d-flex justify-content-between align-items-center mt-3">
                                         <div>
-                                            <a class="remove-item text-danger" id="remove_{{ item.product_id }}">
+                                            <a class="remove-item text-danger" id="remove_{{ item.item_id }}">
                                                 <i class="fas fa-trash-alt fa-lg mr-2"></i>Delete Product
                                             </a>
                                         </div>
@@ -138,21 +138,21 @@ Bag
         <div class="row cart-footer-row">
             <div class="col-lg-8">
                 <div class="row text-center">
-                    <a href="{% url 'products' %}" class="btn btn-yellow mt-2 mr-2">
+                    <a href="{% url 'products' %}" class="btn btn-black mt-2 mb-5 mr-2">
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
                         </span>
                         <span>Keep Shopping</span>
                     </a>
                     {% if request.user.is_authenticated %}
-                    <a href="{% url 'checkout' %}" class="btn btn-blue mt-2">
+                    <a href="{% url 'checkout' %}" class="btn btn-black mt-2 mb-5">
                         <span>Secure Checkout</span>
                         <span class="icon">
                             <i class="fas fa-lock"></i>
                         </span>
                     </a>
                     {% else %}
-                    <a href="{% url 'account_login' %}" class="btn btn-blue mt-2">
+                    <a href="{% url 'account_login' %}" class="btn btn-black mt-2 mb-5">
                         <span>Secure Checkout</span>
                         <span class="icon">
                             <i class="fas fa-lock"></i>
@@ -163,23 +163,13 @@ Bag
             </div>
         </div>
         {% else %}
-        <div class="row cart-items-total">
-            <h4>Your bag is currently empty</h4>
-        </div>
-        <div class="row cart-footer-row">
-            <div class="col-lg-12">
-                <div class="row bg-light align-items-center text-center">
-                    <div class="col-md-6 text-md-left cart-footer">
-                        <a href="{% url 'products' %}" class="btn btn-yellow mt-2 mr-2">
-                            <span class="icon">
-                                <i class="fas fa-chevron-left"></i>
-                            </span>
-                            <span>Keep Shopping</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <p class="lead mb-5">Your bag is empty.</p>
+        <a href="{% url 'products' %}" class="btn btn-black mb-5">
+            <span class="icon">
+                <i class="fas fa-chevron-left"></i>
+            </span>
+            <span>Keep Shopping</span>
+        </a>
         {% endif %}
     </div>
 </section>
