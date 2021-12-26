@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 {% block extra_title %}Edit inspo Item{% endblock %}
+
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
@@ -9,22 +10,21 @@
     </div>
 </div>
 {% endblock %}
+
 {% block content %}
 <div class="overlay"></div>
-<div>
-    <div class="section-holder">
-        <div class="form-holder-lg form-holder-generic">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <h1 class="header-font mb-4 pt-2 text-center">inspo Item Management</h1>
-                        <h2 class="text-muted text-center">Edit inspo Item</h2>
-                        <hr>
-                    </div>
-                </div>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-6">
+            <h2 class="page-banner text-white mt-4 mb-4">Inspo Management</h2>
+        </div>
+    </div>
+    <div>
+        <div class="section-holder">
+            <div class="form-holder-lg form-holder-generic">
                 <!-- Edit New Item -->
                 <div class="row justify-content-center">
-                    <div class="col-sm-12 col-lg-8 pb-5">
+                    <div class="col-sm-12 col-lg-6 pb-5">
                         <form method="POST" action="{% url 'edit_inspo_item' inspo_item.id %}" class="form mb-2" enctype="multipart/form-data">
                             {% csrf_token %}
                             {% for field in inspo_form %}
@@ -35,8 +35,8 @@
                             {% endif %}
                             {% endfor %}
                             <div class="text-center pb-3">
-                                <a class="btn black-btn" href="{% url 'manage_inspo_items' %}">Cancel</a>
-                                <button class="btn green-btn" type="submit">Save Changes</button>
+                                <a class="btn btn-outline-black" href="{% url 'manage_inspo_items' %}">Cancel</a>
+                                <button class="btn btn-outline-black" type="submit">Save Changes</button>
                             </div>
                         </form>
                     </div>
