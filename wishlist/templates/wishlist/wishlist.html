@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 {% block extra_title %}wishlist{% endblock %}
+
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -8,13 +9,13 @@
         </div>
     </div>
 {% endblock %}
+
 {% block content %}
-<div class="overlay"></div>
-    <div class="container-fluid px-3">
+    <div class="overlay"></div>
+    <div class="container">
         <div class="row">
-            <div class="col-12 col-sm-6 p-4 my-auto">
-                <h1 class="font-black-bg">Wishlist ({{ wishlist_items_count }})</h1>
-                <p class="font-black-bg">Here are your wishlist saved</p>
+            <div class="col">
+                <h2 class="page-banner text-white mt-4 mb-4">Wishlist ({{ wishlist_items_count }})</h2>
             </div>
         </div>
         <div class="row">
@@ -22,37 +23,39 @@
                 <div class="row">
                     {% for wishlist in wishlist_items %}
                             <!-- List of wishlist -->
-                            <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
-                                    <div class="card" style="width: 18rem;">
+                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                                <div class="card h-100 border-0">
                                         {% if wishlist.image %}
                                             <a href="{% url 'product_detail' wishlist.id %}">
-                                                <img src="{{ wishlist.image.url }}" class="card-img-top" alt="{{ wishlist.name }}">
+                                                <img class="card-img-top img-fluid"  src="{{ wishlist.image.url }}" alt="{{ wishlist.name }}">
                                             </a>
                                         {% else %}
                                             <a href="{% url 'product_detail' wishlist.id %}">
-                                                <img src="{{ MEDIA_URL }}noimage.png" class="card-img-top" alt="not available">
+                                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="not available">
                                             </a>
                                         {% endif %}
                                         <div class="card-body">
                                             <div class="row">
                                                 <div class="col-12">
-                                                    <h2 class="card-title font-black">{{ wishlist.name }}</h2>
-                                                </div>
-                                                <div class="col-12">
-                                                    <h3 class="font-weight-light font-black">{{ wishlist.category.friendly_name }}</h3>
+                                                    <p class="mb-0 text-black font-weight-bold">{{ wishlist.name }}</p>
                                                 </div>
                                                 <div class="col-6 align-self-center font-black">
-                                                    <strong>${{ wishlist.price }}</strong>
+                                                    {% if wishlist.onsale %}
+                                                        <p class="mb-0 text-left item-price"><s>${{wishlist.price }}</s></p>
+                                                        <p class="mb-0 text-left item-sale-price">${{wishlist.onsale_price }}</p>
+                                                    {% else %}
+                                                        <p class="mb-0 text-left item-price font-weight-bold">${{wishlist.price }}</p>
+                                                    {% endif %}
                                                 </div>
                                           </div>
                                             <div class="center-div pt-3">
-                                                <a class="btn black-btn" data-bs-toggle="modal" data-bs-target="#deletewishlist{{ wishlist.id }}">Delete</a>
+                                                <a class="btn btn-black" data-bs-toggle="modal" data-bs-target="#deletewishlist{{ wishlist.id }}">Delete</a>
                                                 <!-- Delete wishlist modal -->
                                                 <div class="modal fade" id="deletewishlist{{ wishlist.id }}" tabindex="-1"  aria-hidden="true">
                                                     <div class="modal-dialog">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
-                                                                <h2 class="modal-title font-black">Delete wishlist</h2>
+                                                                <h4>Delete wishlist</h4>
                                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                             </div>
                                                             <div class="modal-body font-black">
@@ -60,8 +63,8 @@
                                                             </div>
                                                             <div class="modal-footer">
                                                                 <!-- Close and delete wishlist buttons-->
-                                                                <button type="button" class="btn black-btn" data-bs-dismiss="modal">Close</button>
-                                                                <a href="{% url 'remove_product_from_wishlist' wishlist.id 'wishlist' %}" class="btn red-btn">Delete</a>
+                                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                                <a href="{% url 'remove_product_from_wishlist' wishlist.id 'wishlist' %}" class="btn btn-danger">Delete</a>
                                                             </div>
                                                         </div>
                                                     </div>
