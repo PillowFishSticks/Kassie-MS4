@@ -33,7 +33,7 @@
                                 <hr>
                             </div>
                             {% if inspo_item.user == request.user or request.user.is_superuser %}
-                            <div class="row justify-content-center">
+                            <div class="text-center">
                                 <a class="btn btn-info mb-5 mr-2" href="{% url 'edit_inspo_item' inspo_item.id %}" role="button">Edit</a>
                                 <button type="button" class="btn btn-danger mb-5" data-bs-toggle="modal"
                                 data-bs-target="#deleteInspoItem">
