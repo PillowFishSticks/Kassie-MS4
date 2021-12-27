@@ -247,6 +247,17 @@ a.category-badge > span.badge:hover {
     cursor: pointer;
 }
 
+.inspo-title {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    padding-bottom: 20px;
+}
+
+.inspo-title:hover {
+    color: black;
+    text-decoration: underline;
+}
 
 /* -------------------------------- Media Queries */
 
@@ -405,6 +416,7 @@ font-family: 'Lato';
 
 
 
+
 .cart-card-header{
 padding-bottom: 2rem;
 text-transform: uppercase;
@@ -436,10 +448,13 @@ margin: 2rem 0;
     .inspo-card {
         width: 300px;
     }
-    .inspo-card-img-top {
-        height: 300px;
+
+    .inspo-card {
+        height: 200px;
         width: 300px;
     }
+
+
     /* --- inspo item detail --- */
     .inspo-card-detail-img-top {
         width: 400px ;

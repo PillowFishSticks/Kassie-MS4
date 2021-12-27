@@ -47,22 +47,24 @@
                                             <a class="btn black-btn" href="{% url 'edit_inspo_item' inspo_item.id %}">Edit</a>
                                         </td>
                                         <td>
-                                            <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteInspoItem{{ inspo_item.id }}">Delete</a>
-                                            <!-- Delete inspo item modal -->
-                                            <div class="modal fade" id="deleteinspoItem{{ inspo_item.id }}" tabindex="-1"  aria-hidden="true">
-                                                <div class="modal-dialog">
+                                            <button type="button" class="btn black-btn" data-bs-toggle="modal"
+                                            data-bs-target="#deleteInspoItem">
+                                            Delete</button>
+                                            <!-- Delete Button Modal -->
+                                            <div class="modal fade" id="deleteInspoItem" tabindex="-1" role="dialog" aria-labelledby="deleteInspoItem" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered" role="document">
                                                     <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h2 class="modal-title">Delete inspo Item</h2>
+                                                                <div class="modal-header">
+                                                            <h4>Delete inspo Item {{ inspo_item.title }} </h4>
                                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                         </div>
                                                         <div class="modal-body">
-                                                            Are you sure you want to delete this inspo item?
+                                                                    You are about to delete Title ({{ inspo_item.title }}) 
                                                         </div>
                                                         <div class="modal-footer">
-                                                            <!-- Close and delete inspo item buttons-->
+                                                            <!-- Close and delete product buttons-->
                                                             <button type="button" class="btn black-btn" data-bs-dismiss="modal">Close</button>
-                                                                <a href="{% url 'delete_inspo_item' inspo_item.id  %}" class="btn red-btn">Delete</a>
+                                                            <a href="{% url 'delete_inspo_item' inspo_item.id  %}" class="btn red-btn">Delete</a>
                                                         </div>
                                                     </div>
                                                 </div>
