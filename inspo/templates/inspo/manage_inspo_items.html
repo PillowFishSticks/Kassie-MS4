@@ -60,11 +60,11 @@
                                                     aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
-                                                You are about to delete Title ({{ inspo_item.title }})
+                                                You are about to delete ({{ inspo_item.title }})
                                             </div>
                                             <div class="modal-footer">
                                                 <!-- Close and delete product buttons-->
-                                                <button type="button" class="btn black-btn"
+                                                <button type="button" class="btn btn-secondary"
                                                     data-bs-dismiss="modal">Close</button>
                                                 <a href="{% url 'delete_inspo_item' inspo_item.id  %}"
                                                     class="btn btn-danger">Delete</a>
