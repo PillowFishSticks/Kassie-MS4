@@ -2,83 +2,86 @@
 {% load static %}
 {% block extra_title %}Manage inspo items{% endblock %}
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
+
 {% block content %}
 <div class="overlay"></div>
-    <div>
-        <div class="section-holder">
-            <div class="form-holder-lg">
-                <div class="container">
-                    <div class="row">
-                        <div class="col mt-3">
-                            <h1 class="header-font mb-2 pt-1 text-center text-black">inspo Items ({{ inspo_items_count }}) <a class="btn green-btn" href="{% url 'add_inspo_item' %}">Add</a></h1>
-                        </div>
-                    </div>
-                    <!-- All inspo Items -->
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="table-responsive">
-                            <table class="table">
-                              <thead>
-                                <tr>
-                                  <th scope="col">inspo Item Title</th>
-                                  <th scope="col">Create Date</th>
-                                  <th scope="col">Status</th>
-                                  <th scope="col">Edit</th>
-                                  <th scope="col">Delete</th>
-                                </tr>
-                              </thead>
-                                <tbody>
-                                    {% for inspo_item in inspo_items %}
-                                    <tr>
-                                      <td>{{ inspo_item.title }}</td>
-                                      <td>{{ inspo_item.create_date }}</td>
-                                            {% if inspo_item.status == 1 %}
-                                                <td>Published</td>
-                                            {% else %}
-                                                <td>Draft</td>
-                                            {% endif %}
-                                        <td>
-                                            <a class="btn black-btn" href="{% url 'edit_inspo_item' inspo_item.id %}">Edit</a>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="btn black-btn" data-bs-toggle="modal"
-                                            data-bs-target="#deleteInspoItem">
-                                            Delete</button>
-                                            <!-- Delete Button Modal -->
-                                            <div class="modal fade" id="deleteInspoItem" tabindex="-1" role="dialog" aria-labelledby="deleteInspoItem" aria-hidden="true">
-                                                <div class="modal-dialog modal-dialog-centered" role="document">
-                                                    <div class="modal-content">
-                                                                <div class="modal-header">
-                                                            <h4>Delete inspo Item {{ inspo_item.title }} </h4>
-                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                                    You are about to delete Title ({{ inspo_item.title }}) 
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <!-- Close and delete product buttons-->
-                                                            <button type="button" class="btn black-btn" data-bs-dismiss="modal">Close</button>
-                                                            <a href="{% url 'delete_inspo_item' inspo_item.id  %}" class="btn red-btn">Delete</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
+<div class="container">
+    <div class="row">
+        <div class="col add-inspo">
+            <h2 class="page-banner text-white mt-4 mb-4">Inspo Items ({{ inspo_items_count }})
+                <a class="btn btn-black" href="{% url 'add_inspo_item' %}">Add</a></h2>
+        </div>
+    </div>
+    <!-- All inspo Items -->
+    <div class="row">
+        <div class="col-12">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Inspo Item Title</th>
+                            <th scope="col">Date Created</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Edit</th>
+                            <th scope="col">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for inspo_item in inspo_items %}
+                        <tr>
+                            <td>{{ inspo_item.title }}</td>
+                            <td>{{ inspo_item.create_date }}</td>
+                            {% if inspo_item.status == 1 %}
+                            <td>Published</td>
+                            {% else %}
+                            <td>Draft</td>
+                            {% endif %}
+                            <td>
+                                <a class="btn btn-info" href="{% url 'edit_inspo_item' inspo_item.id %}">Edit</a>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                                    data-bs-target="#deleteInspoItem">
+                                    Delete</button>
+                                <!-- Delete Button Modal -->
+                                <div class="modal fade" id="deleteInspoItem" tabindex="-1" role="dialog"
+                                    aria-labelledby="deleteInspoItem" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h4>Delete inspo Item {{ inspo_item.title }} </h4>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
                                             </div>
-                                        </td>
-                                    </tr>
-                                    {% endfor %}
-                                </tbody>
-                            </table>
-                        </div>
-                        </div>
-                    </div>
-                </div>
+                                            <div class="modal-body">
+                                                You are about to delete Title ({{ inspo_item.title }})
+                                            </div>
+                                            <div class="modal-footer">
+                                                <!-- Close and delete product buttons-->
+                                                <button type="button" class="btn black-btn"
+                                                    data-bs-dismiss="modal">Close</button>
+                                                <a href="{% url 'delete_inspo_item' inspo_item.id  %}"
+                                                    class="btn btn-danger">Delete</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
+</div>
+</div>
+</div>
+</div>
 {% endblock %}
