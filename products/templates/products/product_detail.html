@@ -24,25 +24,26 @@
                             <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                         </a>
                     {% endif %}
-                    {% if is_product_in_wishlist %}
-                        <a href="{% url 'remove_product_from_wishlist' product.id 'product' %}" aria-label="remove product from wishlist" class="wishlist wishlist-remove text-danger ml-3"><i class="fas fa-heart"></i></a>
-                        {% else %}
-                        <a href="{% url 'add_product_to_wishlist' product.id %}" aria-label="add product to wishlist" class="wishlist text-danger ml-3"><i class="far fa-heart"></i></a>
-                    {% endif %}
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="product-details-container mb-5 mt-md-5">
-                    <p class="mb-0">{{ product.name }}</p>
-                    <p class="lead mb-0 text-left font-weight-bold">{{ product.category.friendly_name }}</p>
+                    <h4 class="mb-0 font-weight-bold">
+                        {{ product.name }}
+                        {% if is_product_in_wishlist %}
+                            <a href="{% url 'remove_product_from_wishlist' product.id 'product' %}" aria-label="remove product from wishlist" class="wishlist wishlist-remove text-danger ml-3"><i class="fas fa-heart"></i></a>
+                        {% else %}
+                            <a href="{% url 'add_product_to_wishlist' product.id %}" aria-label="add product to wishlist" class="wishlist text-danger ml-3"><i class="far fa-heart"></i></a>
+                        {% endif %}
+                    </h4>
                 {% if product.onsale %}
-                    <p class="lead mb-0 text-left font-weight-bold"><s>Was ${{product.price }}</s></p>
-                    <p class="lead mb-0 text-left font-weight-bold">Now is ${{product.onsale_price }}</p>
+                    <p class="lead mt-3 mb-0 text-left font-weight-bold"><s>Was ${{product.price }}</s></p>
+                    <p class="lead mt-3 mb-0 text-left font-weight-bold">Now is ${{product.onsale_price }}</p>
                 {% else %}
-                    <p class="mb-0 text-left item-price font-weight-bold">${{product.price }}</p>
+                    <p class="mt-3 mb-0 text-left item-price font-weight-bold">${{product.price }}</p>
                 {% endif %}
                     <p class="mt-3">{{ product.description }}</p>
-                    <p class="mt-3">{{ product.dimensions }}</p>
+                    <p class="mt-3">{{ product.dimensions|safe }}</p>
                 </div>
                 {% if request.user.is_superuser %}
                     <div class="ml-3">
@@ -80,20 +81,15 @@
                                 </div>
                             </div>
 
-                        <div class="col-12">
-                            <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
-                                <span class="icon">
-                                    <i class="fas fa-chevron-left"></i>
-                                </span>
-                                <span class="text-uppercase">Keep Shopping</span>
-                            </a>
-                            <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
+                        <div class="col-12"></div>
+                            <input type="submit" class="btn btn-black rounded-0 mt-5 mb-5" value="Add to Bag">
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </div>
                 </form>
             </div>
         </div>
+        <!-- Tab links -->
         <div id="listing-description" class="col-md-8 offset-lg-2">
             <div class="tab">
                 <button class="tablinks font-weight-bold d-flex" onclick="openContent(event, 'Reviews')">Reviews</button>

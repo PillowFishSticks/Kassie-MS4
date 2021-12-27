@@ -67,7 +67,7 @@
         <form class="form mt-3" action="{% url 'add_review' product.pk %}" method="POST">
             {% csrf_token %}
             {{ review_form|crispy }}
-                <button id="submit-review-button" class="btn btn-blue">
+                <button id="submit-review-button" class="btn btn-black mt-2 mb-2">
                     Submit
                 </button>                   
         </form>
