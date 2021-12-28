@@ -1,9 +1,8 @@
-<ul>
-    <li class="list-inline-item">
+<li class="list-inline-item">
       <a class="text-black nav-link d-block d-lg-none" href="#" id="mobile-search" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <div class="text-center">
               <div><i class="fas fa-search fa-lg"></i></div>
-              <p class="my-0">Search</p>
+              <p class="my-0 d-none d-lg-block">Search</p>
           </div>
       </a>
       <div class="dropdown-menu border-0 w-100 p-3 rounded-0 my-0" aria-labelledby="mobile-search">
@@ -45,7 +44,7 @@
 <div class="list-inline-item">
     <a class="{% if wishlist_count %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none" href="{% url 'view_product_wishlist' %}">
         <div class="text-center">
-            <div><i class="fas fa-heart"></i></div>
+            <div><i class="fas fa-heart fa-lg"></i></div>
             <p class="my-0 d-none d-lg-block">
                 {% if wishlist_count %}
                     ({{ wishlist_count }})
@@ -54,7 +53,6 @@
                 {% endif %}
             </p>
         </div>
-
     </a>
 </div>
 <div class="list-inline-item">
