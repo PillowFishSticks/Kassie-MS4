@@ -101,10 +101,55 @@
     </div>
 </section>
 
-<section class="text-center container-fluid">
+<section class="container-fluid">
   <div class="row">
     <h4>Get your weekly fix of style inspo</h4>
-
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-md-6 col-lg-4 mb-5">
+      <div class="mt-3">
+          <div>
+            <a href="#">
+              <img class="inspo-card" src="{{ MEDIA_URL }}inspo2.png" alt=""/>
+            </a>    
+          </div>
+          <div>
+            <a class="inspo-title" href="#">A touch of love is all it takes
+            </a>
+          </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-4 mb-5">
+      <div class="mt-3">
+          <div>
+            <a href="#">
+              <img class="inspo-card" src="{{ MEDIA_URL }}inspo6.png" alt=""/>
+            </a>    
+          </div>
+          <div>
+            <a class="inspo-title" href="#">A dining room that’s ready for everything</a>
+          </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-4 mb-5">
+      <div class="mt-3">
+          <div>
+            <a href="#">
+              <img class="inspo-card" src="{{ MEDIA_URL }}inspo4.png" alt=""/>
+            </a>    
+          </div>
+          <div>
+            <a class="inspo-title" href="#">A serene green bedroom</a>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div>
+      <a href="{% url 'inspo_items' %}" class="btn btn-black btn-lg">
+        Explore more inspo
+      </a>
+    </div>
   </div>
 </section>
 
