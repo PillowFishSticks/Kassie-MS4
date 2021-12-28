@@ -36,12 +36,12 @@
                             <a href="{% url 'add_product_to_wishlist' product.id %}" aria-label="add product to wishlist" class="wishlist text-danger ml-3"><i class="far fa-heart"></i></a>
                         {% endif %}
                     </h4>
-                {% if product.onsale %}
-                    <p class="lead mt-3 mb-0 text-left font-weight-bold"><s>Was ${{product.price }}</s></p>
-                    <p class="lead mt-3 mb-0 text-left font-weight-bold">Now is ${{product.onsale_price }}</p>
-                {% else %}
-                    <p class="mt-3 mb-0 text-left item-price font-weight-bold">${{product.price }}</p>
-                {% endif %}
+                    {% if product.onsale %}
+                        <p class="mb-0 mt-3 text-left item-price"><s>${{product.price }}</s></p>
+                        <p class="mb-0 mt-3 text-left item-sale-price">${{product.onsale_price }}</p>
+                    {% else %}
+                        <p class="mb-0 mt-3 text-left item-price font-weight-bold">${{product.price }}</p>
+                    {% endif %}
                     <p class="mt-3">{{ product.description }}</p>
                     <p class="mt-3">{{ product.dimensions|safe }}</p>
                 </div>
