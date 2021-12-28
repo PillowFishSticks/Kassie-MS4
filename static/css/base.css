@@ -183,6 +183,36 @@ footer a i:hover {
       background: whitesmoke;
       color: #222;
 }
+
+.hide {
+    display: none;
+}
+     
+.imagebuttons:hover {
+    opacity: 0.4;
+}
+
+.imagebuttons:hover + .hide {
+    display: inline-block;
+}
+
+.category-card {
+    position: relative;
+    text-align: center;
+}
+
+.category-card div {
+    color: black;
+    border: 1px solid black;
+    font-weight: 800;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 /* modals homepage */
 
 .modalbanner {
