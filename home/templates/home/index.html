@@ -101,6 +101,35 @@
     </div>
 </section>
 
+<section class="text-center container-fluid">
+  <div class="row">
+    <h4>Get your weekly fix of style inspo</h4>
+
+  </div>
+</section>
+
+<section class="text-center container-fluid">
+  <div class="row">
+    <div class="col-12 col-lg-5 d-none d-lg-block onsale-banner-image mt-5">
+      <a href="#">
+        <img src="{{ MEDIA_URL }}onsale-banner.jpeg" alt="Onsale banner">
+      </a>
+    </div>
+    <div class="col-12 col-lg-7 d-none d-lg-block onsale-banner mt-5">
+      <div class="mt-5">
+        <h1>Sale now on!</h1>
+        <p>Shop online, or in store to get everything you need</p>
+      </div>
+      <div>
+        <a href="{% url 'products' %}?category=all_specials" class="btn btn-white btn-lg mt-3">
+          Shop Now
+        </a>
+      </div>
+     
+    </div>
+  </div>
+</section>
+
 <section class="text-center container-fluid mt-5">
   <!-- Search by category buttons -->
   <div class="row category">

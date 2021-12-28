@@ -152,6 +152,37 @@ footer a i:hover {
     border: 1px solid black !important;
 }
 
+.onsale-banner {
+    background-color: rgb(228, 35, 18);
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    color:white;
+    height: 400px;
+}
+
+.onsale-banner-image img {
+    height: 400px; 
+    width: 100%; 
+}
+
+.onsale-banner h1 {
+    padding-top: 80px;
+}
+
+.btn-white {
+    background: White;
+    color: #222;
+    border-radius: 0%;
+}
+
+.btn-white:hover,
+.btn-white:active,
+.btn-white:focus {
+      background: whitesmoke;
+      color: #222;
+}
 /* modals homepage */
 
 .modalbanner {
