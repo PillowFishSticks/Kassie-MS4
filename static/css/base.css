@@ -433,7 +433,7 @@ a.category-badge > span.badge:hover {
 }
 
 .inspo-card {
-    width: 400px;
+    width: 550px;
     border: 0;
     margin: auto;
     margin-bottom: 10px;
@@ -522,13 +522,6 @@ margin: 2rem 0;
         height: 200px;
         width: 300px;
     }
-
-
-    /* --- inspo item detail --- */
-    .inspo-card-detail-img-top {
-        width: 400px ;
-        height: 400px ;
-    }
   }
 
 /* fixed top navbar only on medium and up */
@@ -569,6 +562,17 @@ margin: 2rem 0;
         padding-top: 80px;
     }
 
+    .container-inspo {
+        max-width: 100%;
+      }
+    
+    .inspo-card {
+        width: 270px;
+        border: 0;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+
     .nav-link i.fa-lg {
         font-size: 1rem;
     }
@@ -596,5 +600,19 @@ margin: 2rem 0;
 }
 
 @media (max-width: 576px) {
+    .container {
+        max-width: 100%;
+      }
 
+    .inspo-detail {
+        width: 300px ;
+        height: auto ;
+    }
+
+    .inspo-card {
+        width: 350px;
+        border: 0;
+        margin: auto;
+        margin-bottom: 10px;
+    }
 }
