@@ -168,7 +168,7 @@ footer a i:hover {
 }
 
 .onsale-banner h1 {
-    padding-top: 80px;
+    padding-top: 100px;
 }
 
 .btn-white {
@@ -438,6 +438,14 @@ a.category-badge > span.badge:hover {
     margin: auto;
     margin-bottom: 10px;
 }
+
+.inspo-card-home {
+    width: 450px;
+    border: 0;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
 .inspo-card-img-top {
     width: 400px ;
     height: 400px ;
@@ -525,6 +533,15 @@ margin: 2rem 0;
   }
 
 /* fixed top navbar only on medium and up */
+@media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait)  {
+    .inspo-card-home {
+        width: 300px;
+        border: 0;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+}
+
 @media (min-width: 991px) {
     .fixed-top-desktop-only {
         position: fixed;
@@ -573,6 +590,13 @@ margin: 2rem 0;
         margin-bottom: 10px;
     }
 
+    .inspo-card-home {
+        width: 350px;
+        border: 0;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+
     .nav-link i.fa-lg {
         font-size: 1rem;
         color: black;
@@ -607,6 +631,10 @@ margin: 2rem 0;
         height: auto; 
         width: 100%; 
     }
+
+    .onsale-banner h1 {
+        padding-top: 20px;
+    }
 }
 
 @media (max-width: 576px) {
@@ -633,6 +661,13 @@ margin: 2rem 0;
         height: auto ;
     }
 
+    .inspo-card-home {
+        width: 350px;
+        border: 0;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+
     .inspo-card {
         width: 350px;
         border: 0;
@@ -641,7 +676,7 @@ margin: 2rem 0;
     }
 
     .onsale-banner {
-        height: 400px
+        height: 200px
     }
 
     div .table-responsive {
