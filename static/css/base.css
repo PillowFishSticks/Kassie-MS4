@@ -555,6 +555,7 @@ margin: 2rem 0;
 
     .nav-link i.fa-lg {
         font-size: 1rem;
+        text-align: right;
     }
 
     .navbar-toggler {
@@ -568,8 +569,29 @@ margin: 2rem 0;
         padding-top: 80px;
     }
 
+    .nav-link i.fa-lg {
+        font-size: 1rem;
+    }
+
     .item-price, .item-sale-price {
         font-size: 15px;
+    }
+
+    .home-banner {
+        height: 250px
+    }
+
+    .home-banner p {
+        font-size: 18px;
+    }
+    
+    .home-banner h1 {
+        padding-top: 25px;
+    }
+    
+    .home-banner-image img {
+        height: auto; 
+        width: 100%; 
     }
 }
 
