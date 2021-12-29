@@ -575,6 +575,7 @@ margin: 2rem 0;
 
     .nav-link i.fa-lg {
         font-size: 1rem;
+        color: black;
     }
 
     .item-price, .item-sale-price {
@@ -582,7 +583,7 @@ margin: 2rem 0;
     }
 
     .home-banner {
-        height: 250px
+        height: 325px
     }
 
     .home-banner p {
@@ -597,12 +598,35 @@ margin: 2rem 0;
         height: auto; 
         width: 100%; 
     }
+
+    .onsale-banner {
+        height: 200px
+    }
+    
+    .onsale-banner-image img {
+        height: auto; 
+        width: 100%; 
+    }
 }
 
 @media (max-width: 576px) {
+    body {
+        padding-top: 50px;
+    }
+
     .container {
         max-width: 100%;
       }
+
+    .modalbanner {
+        background-color: #F6F6F6;
+        width: 100%;
+        height: 80px;
+    }
+
+    .modal h5 {
+        font-size: 12px;
+    }
 
     .inspo-detail {
         width: 300px ;
@@ -614,5 +638,17 @@ margin: 2rem 0;
         border: 0;
         margin: auto;
         margin-bottom: 10px;
+    }
+
+    .onsale-banner {
+        height: 400px
+    }
+
+    div .table-responsive {
+        font-size: 13px;
+    }
+
+    div .table-responsive .btn {
+        font-size: 13px;
     }
 }
