@@ -7,13 +7,12 @@
             <hr>
                 {% if request.user.username == review.user.user.username %}
                 <div class="mt-2">
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editReview">
+                    <button type="button" class="btn btn-info mb-3" data-bs-toggle="modal" data-bs-target="#editReview">
                         Edit
                       </button>                      
-                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteReview">
+                      <button type="button" class="btn btn-danger mb-3" data-bs-toggle="modal" data-bs-target="#deleteReview">
                         Delete
                       </button>                      
-                    <hr>
                 </div> 
                 <div class="modal fade" id="editReview" tabindex="-1" role="dialog" aria-labelledby="editReviewLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -47,7 +46,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <a class="btn btn-blue ml-2" href="{% url 'delete_review' review.pk %}">Delete</a>
+                            <a class="btn btn-danger ml-2" href="{% url 'delete_review' review.pk %}">Delete</a>
                         </div>
                     </div>
                 </div>
@@ -80,8 +79,8 @@
             <p>Please log in or sign up to leave a review</p>
         </div>
         <div class="col-12 d-flex justify-content-center mt-2 mb-5">
-            <a class="btn btn-yellow mr-2" href="{% url 'account_login' %}">Log In</a>
-            <a class="btn btn-blue" href="{% url 'account_signup' %}">Sign Up</a>
+            <a class="btn btn-outline-black mr-3" href="{% url 'account_login' %}">Log In</a>
+            <a class="btn btn-outline-black" href="{% url 'account_signup' %}">Sign Up</a>
             <hr>
         </div>                 
     {% endif %}

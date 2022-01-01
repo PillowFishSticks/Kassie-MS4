@@ -582,6 +582,10 @@ margin: 2rem 0;
     .container-inspo {
         max-width: 100%;
       }
+
+    .nav-item #all-products-link {
+        margin-top: 20px;
+    }
     
     .inspo-card {
         width: 270px;
