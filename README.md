@@ -156,3 +156,15 @@ As a visitor to the Kassie website I expect/want/need:
 - The blacks were chosen for most text and buttons, as it is neutral and compliments the greys. 
 
 - The greys were chosen for this project to provide a neutral background color to information, making a clear seperation from the white background. 
+
+### Styling
+
+- Sharp corner styling was chosen for its bold feel, and as it is a common stylistic choice of bootstrap it blends well with styles used from that library on this project.
+
+## Wireframes
+
+These wireframes were created using [Balsamiq](https://balsamiq.com/) during the Scope Plane part of the design and planning process for this project. 
+
+- [Home](/media/readme/wireframe-home.png)
+- [Products](/media/readme/wireframe-products.png)
+- [Product Detail](/media/readme/wireframe-product-detail.png)
