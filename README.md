@@ -352,3 +352,27 @@ USE_AWS | `True`
 11. From the link provided add `/admin` to the end of the url, log in with your superuser account and create instances of ShippingDestination and Product within the new database.
 
 12. Once instances of these items exist in your database your heroku site will run as expected.
+
+# Credits
+
+## Content
+- All item content and descriptions were taken from the [joybird](https://joybird.com/) website.
+
+### Images
+- All product images were taken from the [joybird](https://joybird.com/) website.
+- The mockup image in the README.md file was created using [Techsini](https://techsini.com/).
+
+## Code
+- [Code Institute](https://codeinstitute.net/) - Code learnt during the Full Stack Web Developer course (specifically the Boutique-Ado project) has been implemented in this project.
+
+- The following websites provided inspiration for my website.
+    - [joybird](https://joybird.com/)
+    - [Ikea](https://www.ikea.com/gb/en/)
+
+- The README file was taken from both Anna Greave's 'The House of Mouse' project and yipmunallen's 'NEAT' project to use as a template.
+    - [The House of Mouse by Anna Greaves](https://github.com/AJGreaves/thehouseofmouse)
+    - [PetPals](https://github.com/MAN95-dev/PetPals)
+    
+## Acknowledgements
+- Special thanks to my mentor Precious, for his time, and guidance with this project.
+- Code Institute tutors for helping support and guide me in the right direction with my code.
