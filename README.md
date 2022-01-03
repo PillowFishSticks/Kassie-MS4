@@ -609,6 +609,7 @@ USE_AWS | `True`
 
 ## Code
 - [Code Institute](https://codeinstitute.net/) - Code learnt during the Full Stack Web Developer course (specifically the Boutique-Ado project) has been implemented in this project.
+- I used some code and found the examples useful in [Learn Django 3 - Creating a User Bookmark / Favourites Features - Part 10](https://www.youtube.com/watch?v=H4QPHLmsZMU) for the wishlist functionality in the relevant applications.
 
 - The following websites provided inspiration for my website.
     - [joybird](https://joybird.com/)
@@ -617,7 +618,6 @@ USE_AWS | `True`
 - The README file was taken from both Anna Greave's 'The House of Mouse' project and MAN95-dev's 'PetPals' project to use as a template.
     - [The House of Mouse by Anna Greaves](https://github.com/AJGreaves/thehouseofmouse)
     - [PetPals](https://github.com/MAN95-dev/PetPals)
-    - [LoveRugby](https://github.com/pmeeny/CI-MS4-LoveRugby)
     
 ## Acknowledgements
 - Special thanks to my mentor Precious, for his time, and guidance with this project.
