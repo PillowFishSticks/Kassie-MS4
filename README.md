@@ -3,7 +3,7 @@
 </div>
 
 
-[Kassie](https://petpals-milestone-4.herokuapp.com/) is an e-commerce site, built using HTML, CSS, JavaScript, Python, and Django. The shop sells a range of pet food and accessories.
+[Kassie](https://kassie-ms4.herokuapp.com/) is an e-commerce site, built using HTML, CSS, JavaScript, Python, and Django. The shop sells a range of furniture.
 
 DISCLAIMER: This website is for educational purposes only and uses products and content from existing brands. Please see the credits section for full information.
 
@@ -54,3 +54,15 @@ Test card details:
     - [Acknowledgements](#acknowledgements)
 
 ----
+
+# Project Summary 
+
+This project is my fourth and final milestone project (Full Stack Frameworks With Django) for the Code Institute Diploma in Software Development.
+
+The purpose of the project is to build a full-stack site based around business logic used to control a centrally-owned dataset , setting up an authentication mechanism and providing paid access to the site's data and/or other activities based on the dataset, such as the purchase of a product/service.
+
+## Site Purpose 
+
+The purpose of the site is to sell furniture items on an online store called Kassie. Customers can purchase items and user engagement is encouraged through the ability to leave reviews and comments and to create user profiles.
+
+The site is intended to be visually appealing, and easy to navigate. It has a responsive design so that it can be viewed easily on mobile and desktop.
