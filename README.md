@@ -131,3 +131,28 @@ As a visitor to the Kassie website I expect/want/need:
 1. To be able to easily get in contact with the shop owner via a telephone number or email.
 
 1. Feedback from the website I am using when I interact with it, I expect pop ups and modals to inform me when my forms have been completed and sent correctly. Or to let me know when an error has ocurred and what to do next.
+
+## Design Choices
+
+### Fonts
+
+- The primary and only font 'Roboto' was chosen for the text of the site because of it clear readability and clean style. 
+
+### Colors
+- The colour scheme for this site was rendered on [Cooler](https://coolors.co/) and can be seen below:
+
+<div align="center">
+    <img src="/media/readme/color-palette.png" alt="Colors used in the Kassie website" aria-label="Colors used in the Kassie website"/>
+</div>
+
+- Black: #000000
+- Eerie Black: #222222
+- Ming: #036A78
+- Cultured: #F6F6F6
+- White: #FFFFFF
+
+- The Ming blue was chosen as the brand color for Kassie, as it provides a strong presence and is a fun color. 
+
+- The blacks were chosen for most text and buttons, as it is neutral and compliments the greys. 
+
+- The greys were chosen for this project to provide a neutral background color to information, making a clear seperation from the white background. 
