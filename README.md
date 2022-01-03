@@ -169,6 +169,94 @@ These wireframes were created using [Balsamiq](https://balsamiq.com/) during the
 - [Products](/media/readme/wireframe-products.png)
 - [Product Detail](/media/readme/wireframe-product-detail.png)
 
+# Features
+
+### Common Features 
+
+#### Navbar
+
+- The navigation bar is sticky to the top of the window so that it can be accessed at all times
+- All of the main pages (other than the individual product pages) can be accessed from the navigation links
+- On smaller screen sizes, all of the navigation links can be accessed via the hamburger button
+- The brand logo will redirect the user back to the homepage when clicked
+- The search bar allows users to search for items. 
+
+#### Footer 
+
+- The footer is displayed at the bottom of the page for all content sizes. 
+- It contains links to socials, however these will just redirect to the website home pages for this project. The links open in a new page so as not the close the site page.
+
+#### Toasts
+
+- Toasts have been used to provide feedback to users, displaying success, error, info and warning messages.
+- A toast is also used to display the current cart to the user when items are added to it.
+- The cart toast will fade out automatically or can be dismissed using the close button. 
+
+#### Admin - Features that are only available to admin accounts
+
+- Admin's have additional options available from the user icon dropdown in the navigation bar:
+    - Item Management (used to add an item to the site).
+    - Inspo Management (used to edit, add, and delete an inspo on the site).
+- On individual item detail pages, buttons to edit and delete an item from the UI appear for admin users only.
+    - The edit button will open a form containing the current item information
+    - The delete button will delete the item. 
+- Access to all the following are available via the Django admin site:
+    - User Profiles
+    - Product categories
+    - Products
+    - Orders
+    - Product reviews
+    - Inspos
+
+### Page Features 
+
+#### Home Page
+
+- The home page displays a hoome banner with an image and some text with a 'Shop Now' button.
+- Below this, 'Get your weekly inspo' is displayed with three images and name links to the different inspo pages. 
+- An onsale banner is displayed below this, with an image and bright red banner with a 'Shop Now' button, that
+takes users to te specials page. 
+- The main product categories are displayed below this with images as shortcuts to the various product category pages.
+
+#### Products Page
+
+- Users can select to view specific categories of products from the navigation bar's dropdown link for each product category, or by using the tag buttons. 
+- The product pages also contain a dropdown that allow users to sort by:
+    - Name (A-Z)
+    - Name (Z-A)
+    - Category (A-Z)
+    - Category (Z-A)
+    - Price (Low - High)
+    - Price (High - Low)
+
+#### ProductDetails Page
+
+- Product details include the product image, name, price, description, and dimensions. The description and dimensions  appear below the "Add to Bag" button, the dimensions are displayed in a table. The reviews tab appears below the dimensions. 
+- The reviews tab shows the reviews, which include the date created, review title, username of reviewer, and the review subject. 
+- The Write a review tab, if the site user is not signed in, they will be prompted to log in or sign up. If the user is already signed in, this tab will contain a form allowing them to leave a review
+- The quantity selector allow users to select 1-20 of a product.
+- An "Add to Bag" button adds the item (with quantity) to the bag.
+
+#### Bag Page
+
+- Users can see all of the items that are in their bag.
+- The quantity of a product in the bag can be updated by updating the quantity and then clicking the "Update" button. This will reload the page, and update the bag totals.
+- A product can be deleted from the bag by clicking the "Delete" button.
+- There is a bag summary card which shows the Subtotal, Delivery and Total Amount. The delivery charge is automatically populated as 10% of the order charge. If the bag total is above the delivery threshold of "$200" then the delivery charge is set to 0. If the bag total is below the delivery threshold, the user is informed of how much more they need to spend to reach it.
+- If the bag is empty, the "Secure Checkout" button is removed.
+
+#### Checkout Page
+
+- This page contains a form where users can enter their personal, delivery and card information.
+- A summary of the order is shown so that users are reminded of what they are purchasing.
+- At the bottom of the screen are two buttons allowing the user to either "Adjust bag" or "Complete Order".
+- Underneath the "Complete Order" button, the user is reminded that their card will be charged $[ Order Amount ].
+
+#### User Profile Page
+
+- Users can use the "Default Information" form to submit default delivery information that will be autofilled next time they check out.
+- The "Order History" section provides users with a last of their past orders. Clicking on the order number will direct the user to the order confirmation of that order so that they can see the order details in full.
+
 # Information Architecture
 
 ### Database Choice
