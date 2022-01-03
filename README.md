@@ -617,6 +617,7 @@ USE_AWS | `True`
 - The README file was taken from both Anna Greave's 'The House of Mouse' project and MAN95-dev's 'PetPals' project to use as a template.
     - [The House of Mouse by Anna Greaves](https://github.com/AJGreaves/thehouseofmouse)
     - [PetPals](https://github.com/MAN95-dev/PetPals)
+    - [LoveRugby](https://github.com/pmeeny/CI-MS4-LoveRugby)
     
 ## Acknowledgements
 - Special thanks to my mentor Precious, for his time, and guidance with this project.
