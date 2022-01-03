@@ -169,6 +169,163 @@ These wireframes were created using [Balsamiq](https://balsamiq.com/) during the
 - [Products](/media/readme/wireframe-products.png)
 - [Product Detail](/media/readme/wireframe-product-detail.png)
 
+# Information Architecture
+
+### Database Choice
+
+- As a framework Django works with SQL databases. I worked with the standard **sqlite3** database installed with Django.
+- On deployment, the SQL database provided by Heroku is a **PostgreSQL** database. 
+
+### Data Models
+
+This project consists of the following 6 Django apps:
+
+- **Home** - Displays the PetPal home page
+
+- **Products** - Handles item display and individual item views
+
+    - Category Model - Stores the product categories
+
+
+    ```python
+    name = models.CharField(max_length=254)
+    friendly_name = models.CharField(max_length=254, null=True, blank=True)
+    ``` 
+
+    - Product Model - Stores individual product information
+
+
+    ```python
+    category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
+    name = models.CharField(max_length=254)
+    description = models.TextField()
+    dimensions = models.TextField(null=True, blank=True)
+    price = models.DecimalField(max_digits=6, decimal_places=2)
+    onsale = models.BooleanField(default=False, null=True, blank=True)
+    onsale_price = models.DecimalField(
+        null=True, max_digits=6, decimal_places=2)
+    image = models.ImageField(null=True, blank=True)
+    ``` 
+
+- **Wishlist** - Adds products to a wishlist for purchase at a later stage
+
+    - Wishlist Model - Stores users products in a wishlist
+
+
+    ```python
+      products = models.ManyToManyField(
+        Product,
+        blank=True
+    )
+    username = models.OneToOneField(
+        User,
+        on_delete=models.CASCADE
+    )
+    ```
+
+- **Bag** - Handles CRUD operations for items in cart
+
+- **Checkout** - Display checkout page and handles payments
+
+    - Order Model - Stores order information
+
+
+    ```python
+    order_number = models.CharField(max_length=32, null=False, editable=False)
+    user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL,
+                                     null=True, blank=True, related_name='orders')
+    full_name = models.CharField(max_length=50, null=False, blank=False)
+    email = models.EmailField(max_length=254, null=False, blank=False)
+    phone_number = models.CharField(max_length=20, null=False, blank=False)
+    country = CountryField(blank_label='Country *', null=False, blank=False)
+    postcode = models.CharField(max_length=20, null=True, blank=True)
+    town_or_city = models.CharField(max_length=40, null=False, blank=False)
+    street_address1 = models.CharField(max_length=80, null=False, blank=False)
+    street_address2 = models.CharField(max_length=80, null=True, blank=True)
+    county = models.CharField(max_length=80, null=True, blank=True)
+    date = models.DateTimeField(auto_now_add=True)
+    delivery_cost = models.DecimalField(max_digits=6, decimal_places=2, null=False, default=0)
+    order_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
+    grand_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
+    original_cart = models.TextField(null=False, blank=False, default='')
+    stripe_pid = models.CharField(max_length=254, null=False, blank=False, default='')
+    ``` 
+
+    - Order Line Model - Stores individual items within an order
+
+
+    ```python
+    order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems')
+    product = models.ForeignKey(Product, null=False, blank=False, on_delete=models.CASCADE)
+    quantity = models.IntegerField(null=False, blank=False, default=0)
+    lineitem_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
+    ``` 
+
+- **Profiles** - Displays user profile and stores user profile information and order history
+
+    - UserProfile Model - Stores user profile information
+
+
+    ```python
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    default_phone_number = models.CharField(max_length=20, null=True, blank=True)
+    default_street_address1 = models.CharField(max_length=80, null=True, blank=True)
+    default_street_address2 = models.CharField(max_length=80, null=True, blank=True)
+    default_town_or_city = models.CharField(max_length=40, null=True, blank=True)
+    default_county = models.CharField(max_length=80, null=True, blank=True)
+    default_postcode = models.CharField(max_length=20, null=True, blank=True)
+    default_country = CountryField(blank_label='Country', null=True, blank=True)
+    ``` 
+
+- **Reviews** - Handles CRUD operations for product reviews
+
+    - Review Model - Stores the review for the product
+
+
+    ```python
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    user = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
+    title = models.CharField(max_length=50)
+    description = models.TextField()
+    date_created = models.DateTimeField(auto_now_add=True)
+    ``` 
+
+- **Inspo** - Displays various room inspirations
+
+    - Inspo Model - Stores the inspo created
+
+
+   ```python
+    ordering = ['-create_date']
+
+    title = models.CharField(
+        verbose_name=_('Title'),
+        max_length=250,
+        unique=True
+    )
+    user = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        related_name='inspo_items'
+    )
+    inspo_item_text = models.TextField(
+        max_length=500,
+    )
+    image = models.ImageField(
+        null=True,
+        blank=True
+    )
+    update_date = models.DateTimeField(
+        auto_now=True
+    )
+    create_date = models.DateTimeField(
+        auto_now_add=True
+    )
+    status = models.IntegerField(
+        choices=STATUS,
+        default=0
+    )
+    ``` 
 
 # Technologies Used
 
@@ -369,7 +526,7 @@ USE_AWS | `True`
     - [joybird](https://joybird.com/)
     - [Ikea](https://www.ikea.com/gb/en/)
 
-- The README file was taken from both Anna Greave's 'The House of Mouse' project and yipmunallen's 'NEAT' project to use as a template.
+- The README file was taken from both Anna Greave's 'The House of Mouse' project and MAN95-dev's 'PetPals' project to use as a template.
     - [The House of Mouse by Anna Greaves](https://github.com/AJGreaves/thehouseofmouse)
     - [PetPals](https://github.com/MAN95-dev/PetPals)
     
