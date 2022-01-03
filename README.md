@@ -168,3 +168,40 @@ These wireframes were created using [Balsamiq](https://balsamiq.com/) during the
 - [Home](/media/readme/wireframe-home.png)
 - [Products](/media/readme/wireframe-products.png)
 - [Product Detail](/media/readme/wireframe-product-detail.png)
+
+
+# Technologies Used
+
+### Tools
+- [Django](https://www.djangoproject.com/) as python web framework for rapid development and clean design.
+- [Stripe](https://stripe.com) as payment platform to validate and accept credit card payments securely.
+- [AWS S3 Bucket](https://aws.amazon.com/) to store images entered into the database.
+- [Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html) to enable creation, configuration and management of AWS S3.
+- [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) to style django forms.
+- [Django Storages](https://django-storages.readthedocs.io/en/latest/) a collection of custom storage backends with django to work with boto3 and AWS S3.
+- [Gunicorn](https://pypi.org/project/gunicorn/) WSGI HTTP Server for UNIX to aid in deployment of the Django project to heroku.
+- [Pillow](https://pillow.readthedocs.io/en/stable/) as python imaging library to aid in processing image files to store in database.
+- [Psycopg2](https://pypi.org/project/psycopg2/) as PostgreSQL database adapter for Python.
+- [Git](https://gist.github.com/derhuerst/1b15ff4652a867391f03) to handle version control.
+- [GitHub](https://github.com/) to store and share all project code remotely. 
+- [Browserstack](https://www.browserstack.com/) to test functionality on all browsers and devices.
+- Heroku for deployment
+- [Google Chrome Developer Tools](https://developer.chrome.com/docs/devtools/) used to inspect page elements, test different CSS styles and debug site issues using the console
+- [Balsamiq](https://balsamiq.com/) to create the wireframes for this project.
+
+### Databases
+- [PostgreSQL](https://www.postgresql.org/) for production database, provided by heroku.
+- [SQlite3](https://www.sqlite.org/index.html) for development database, provided by django.
+
+### Libraries
+- [JQuery](https://jquery.com) to simplify DOM manipulation.
+- [Bootstrap](https://www.bootstrapcdn.com/) to simplify the structure of the website and make the website responsive.
+- [FontAwesome](https://www.bootstrapcdn.com/fontawesome/) to provide icons for PetPals website. 
+- [Google Fonts](https://fonts.google.com/) to style the website fonts.
+
+### Languages
+- This project uses HTML, CSS, JavaScript and Python programming languages.
+
+# Testing 
+
+Testing information can be found in separate [TESTING.md](TESTING.md) file.
