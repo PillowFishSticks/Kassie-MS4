@@ -97,3 +97,37 @@ As a site user I want to be able to:
 - Enjoy browsing all the furniture products.
 - Be able to navigate the shop easily, find what I need and make a safe and secure purchase.
 - Buy from a trustworthy online shop. 
+
+## User Stories
+
+As a visitor to the Kassie website I expect/want/need:
+
+1. To easily find what I am looking for, I want the layout of the site to make sense so I am not confused or put off using it. 
+
+1. The ability to search through small amounts of information to find what I need, and then be able to easily click to get more detailed information when I need it.
+
+1. The site to be easily navigable from any device, desktop, tablet or phone. For the content to look good and be useable on all of these devices.
+
+1. To be able to add products to a wishlist that I wish to purchase at a later time. 
+
+1. To be able to read reviews of products bought from previous customers, to build trust in my purchase.
+
+1. Leave a review on a product so that I can inform other shoppers about whether it was a good purchase or not.
+
+1. For all information and images to be laid out in a clear and easy to understand way, on whatever size screen I am viewing the website on.
+
+1. To be able to easily find out all the information I need to make an informed purchase. I expect information about the description, ingredients, and instructions where necessary. 
+
+1. A text search function so that I can quickly narrow down my search when looking for something specific
+
+1. To be able to see a summary of my order during the checkout process.
+
+1. That once I am logged in I can access my account details and update them if I need to. 
+
+1. To be able to find information on my past orders. 
+
+1. To be able to connect to the businesses social media channels, to keep up to date with new items and deals on the site. 
+
+1. To be able to easily get in contact with the shop owner via a telephone number or email.
+
+1. Feedback from the website I am using when I interact with it, I expect pop ups and modals to inform me when my forms have been completed and sent correctly. Or to let me know when an error has ocurred and what to do next.
