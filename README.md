@@ -66,3 +66,34 @@ The purpose of the project is to build a full-stack site based around business l
 The purpose of the site is to sell furniture items on an online store called Kassie. Customers can purchase items and user engagement is encouraged through the ability to leave reviews and comments and to create user profiles.
 
 The site is intended to be visually appealing, and easy to navigate. It has a responsive design so that it can be viewed easily on mobile and desktop.
+
+# UX
+
+## Goals
+
+### Site Owner Goals
+
+As a site owner I want to be able to:
+
+- Create a visually appealing site with a strong brand identity.
+- Add products on the website so I can add new items to my stores.
+- Edit existing products in my store so I can change product prices, descriptions, images and other product information.
+- Delete products on the website so I can remove items from my store.
+- Have links that direct users to our social sites for further engagement.
+- Keep track of sales data to inform future product choices.
+
+### Site User Goals
+
+The central target audience for Kassie are:
+
+- People who would like to shop for furniture. 
+- People who would like to own quality furniture. 
+- People who would like the ease of shopping online for furniture.
+- People who value door to door delivery.
+
+As a site user I want to be able to:
+
+- Find furniture needed for my home. 
+- Enjoy browsing all the furniture products.
+- Be able to navigate the shop easily, find what I need and make a safe and secure purchase.
+- Buy from a trustworthy online shop. 
