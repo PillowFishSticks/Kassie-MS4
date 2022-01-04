@@ -174,10 +174,6 @@ These wireframes were created using [Balsamiq](https://balsamiq.com/) during the
 
 ### Common Features 
 
-<div align="center">
-    <img src="/media/readme/data-model.png" alt="Data model" aria-label="Data model"/>
-</div>
-
 #### Navbar
 
 - The navigation bar is sticky to the top of the window so that it can be accessed at all times
@@ -270,6 +266,10 @@ takes users to te specials page.
 - On deployment, the SQL database provided by Heroku is a **PostgreSQL** database. 
 
 ### Physical Database Model
+
+<div align="center">
+    <img src="/media/readme/data-model.png" alt="Data model" aria-label="Data model"/>
+</div>
 
 ### Data Models
 
