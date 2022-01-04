@@ -63,29 +63,37 @@ def all_products(request):
 
 def product_detail(request, product_id):
     """ A view to show individual product details """
-
     product = get_object_or_404(Product, pk=product_id)
     reviews_raw = Review.objects.filter(product=product)
     reviews = reviews_raw.order_by('-date_created')
     review_form = ReviewForm()
+    is_product_in_wishlist = False
 
     if request.user.is_authenticated:
         user = UserProfile.objects.get(user=request.user)
         try:
+
             wishlist = get_object_or_404(Wishlist, username=request.user.id)
+
+            # iterate through the manytomany list and check for item
+            for item in wishlist.products.all():
+                if item.id == product.id:
+                    is_product_in_wishlist = True
+                    break
+
             user_profile = get_object_or_404(UserProfile, user=request.user)
             review = get_object_or_404(Review, product=product, user=user_profile)
             edit_review_form = ReviewForm(instance=review)
-    
+
             review_form = None
         except Http404:
-            is_product_in_wishlist = False
             edit_review_form = None
     else:
         edit_review_form = None
 
     context = {
         'product': product,
+        'is_product_in_wishlist': is_product_in_wishlist,
         'reviews': reviews,
         'review_form': review_form,
         'edit_review_form': edit_review_form,
