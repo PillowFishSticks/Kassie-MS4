@@ -32,6 +32,7 @@ Test card details:
 
 5. [Information Architecture](#information-architecture)
     - [Database choice](#database-choice)
+    - [Physical database model](#physical-database-model)
     - [Data Models](#data-models)
 
 6. [Technologies Used](#technologies-used)
@@ -173,6 +174,10 @@ These wireframes were created using [Balsamiq](https://balsamiq.com/) during the
 
 ### Common Features 
 
+<div align="center">
+    <img src="/media/readme/data-model.png" alt="Data model" aria-label="Data model"/>
+</div>
+
 #### Navbar
 
 - The navigation bar is sticky to the top of the window so that it can be accessed at all times
@@ -263,6 +268,8 @@ takes users to te specials page.
 
 - As a framework Django works with SQL databases. I worked with the standard **sqlite3** database installed with Django.
 - On deployment, the SQL database provided by Heroku is a **PostgreSQL** database. 
+
+### Physical Database Model
 
 ### Data Models
 
