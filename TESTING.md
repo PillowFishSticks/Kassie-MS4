@@ -17,7 +17,6 @@
     - [Unsolved bugs](#unsolved-bugs)
 5. [Further Testing](#further-testing)
 
-
 ## Automated Testing
 
 ### Validation
@@ -82,7 +81,7 @@ The following section goes through the user stories identified in the [Ux sectio
 1. **Leave a review on a product so that I can inform other shoppers about whether it was a good purchase or not.**
     - Users can leave a review using the "Write a review" tab at the bottom of each product page
     - This feature is only available to logged in users, and if a user is not logged in they will be prompted to either log in or sign up.
-    - Upon submission of the review form, the item page will reload and the user will be able to see their review in the reviews tab.
+    - Upon submission of the review form, the product page will reload and the user will be able to see their review in the reviews tab.
     - Users are also able to edit and delete their reviews once written. 
 
 1. **For all information and images to be laid out in a clear and easy to understand way, on whatever size screen I am viewing the website on.**
@@ -95,7 +94,7 @@ The following section goes through the user stories identified in the [Ux sectio
     - A text search is available in the navbar. It searches through the product titles, description and tags to find the results for the user.
 
 1. **To be able to see a summary of my order during the checkout process.**
-    - Users can see full detail of all items in their cart, as well as a cart total by clicking on the cart icon in the navigation bar which will redirect them to the cart page
+    - Users can see full detail of all products in their bag, as well as a bag total by clicking on the bag icon in the navigation bar which will redirect them to the bag page.
 
 1. **That once I am logged in I can access my delivery details and update them if I need to.** 
     - The profile page gives the logged in user the ability to update their default delivery information.
@@ -107,10 +106,10 @@ The following section goes through the user stories identified in the [Ux sectio
     - Facebook, Instagram, Twitters, and Pinterest icons can be found in the footer on every page. 
 
 1. **To be able to easily get in contact with the shop owner via a telephone number or email.**
-    - The PetPals contact number and email address can be found in the footer on every page. 
+    - The Kassie contact number and email address can be found in the footer on every page. 
 
 1. **Feedback from the website I am using when I interact with it, I expect pop ups and modals to inform me when my forms have been completed and sent correctly. Or to let me know when an error has ocurred and what to do next.**
-    - Popups appear to inform the user when their forms are completed, when items are added to their cart, when they checkout successfully, as well as if there are any errors when cheecking out. 
+    - Popups appear to inform the user when their forms are completed, when products are added to their bag, when they checkout successfully, as well as if there are any errors when checking out. 
     - Error messages are also returned to the user when there is a problem with the site's functionality.
 
 ## Manual Testing
@@ -127,12 +126,12 @@ All steps on desktop were repeated in browsers: Firefox, Chrome and Internet Exp
     - Confirm that when logged out the options "Register" and "Log in" are visible and that "Log out" is not.
     - Log into the site, confirm that "Log out" is visible and that "Register" and "Log in" are not.
     - Click the "Shop" link in the navbar, confirm that all sections of the shop are listed in the dropdown menu.
-    - Add an item to the users cart, confirm that the grand total appears under the shopping cart icon with the correct grand total. 
-    - Delete all items from the users cart, confirm that the grand total is no longer visible in the navbar.
+    - Add a product to the users bag, confirm that the grand total appears under the shopping bag icon with the correct grand total. 
+    - Delete all products from the users bag, confirm that the grand total is no longer visible in the navbar.
 
 2. Search bar
-    - Enter a search word that applies to many items. 
-        - Confirm that the items returned match the items. Confirm that the message "0 items found for (item)" is displayed when hitting enter.
+    - Enter a search word that applies to many products. 
+        - Confirm that the products returned match the products. Confirm that the message "0 products found for (product)" is displayed when hitting enter.
 
 3. Footer
     - Hover over links in the footer, confirm the animation works as expected.
@@ -142,25 +141,29 @@ All steps on desktop were repeated in browsers: Firefox, Chrome and Internet Exp
 
 #### Home Page
 
-1. Carousel images
-    - Click slider buttons, confirm that they work as expected.
-    - Adjust width of browser window, confirm image is responsive.
+1. Home banner
+    - Click the 'Shop Now' button to ensure it takes the user to all products page.
+    - Adjust width of browser window, confirm image is responsive and disappears on mobile devices.
 
-2. On Sale section
-    - Click on each of the items to ensure it takes the user to the correect item detail page.
+2. Inspo section
+    - Click on each of the inspo titles to ensure it takes the user to the correct inspo page.
+    - Check that an extra inspo is added on medium and small devices to help with styling. 
 
-3. Shop by pet
-    - Hover over each of the buttons to ensure that the pet name display. 
-    - Click each of the buttons to ensure the user is taken to the correct items display page. 
+3. On sale section
+    - Click the 'Shop Now' button to ensure it takes the user to all specials page.
+    - Adjust width of browser window, confirm image is responsive and disappears on mobile devices.
 
-#### Pet pages
+4. Shop by furniture
+    - Click each of the buttons to ensure the user is taken to the correct products display page. 
 
-1. Types of items
+#### Furniture pages
+
+1. Types of products
     - Click tag buttons, confirm they work and go to the correct locations.
     - Click each of the dropdown links, confirm they go to the correct location. 
-    - Click the All items link, confirm all items for that pet are displayed. 
+    - Click the All products link, confirm all products for that category are displayed. 
     - Confirm that the image and prices displayed are correct.
-    - Click multiple items, confirm that the user is taken to the correct items detail page.
+    - Click multiple products, confirm that the user is taken to the correct products detail page.
 
 2. Sorting options
     - Select the different sorting options from the menu one by one, confirm that the iteems are sorted in the orders selected.
@@ -168,9 +171,22 @@ All steps on desktop were repeated in browsers: Firefox, Chrome and Internet Exp
 #### On Sale Page
 
 1. Prices 
-    - Ensure that the original price is displayed in red, with a line through it. 
-    - Ensure the on sale price is slightly bigger and is displayed in blue. 
-    - Check that the on sale price is used when the item is added to the cart. 
+    - Ensure that the original price is displayed in grey, with a line through it. 
+    - Ensure the on sale price is displayed in red. 
+    - Check that the on sale price is used when the product is added to the bag. 
+
+#### Inspo Page
+
+1. Inspo Management
+    - Ensure the inspo management table loads correctly on all device sizes. 
+    - Click on the edit button and check that it takes you to the edit page for that inspo. 
+    - Click the delete button and check that the delete modal appears, asking the superuser if they are sure they
+    want to delete the inspo.  
+
+2. Inspo pages           
+    - Click on each of the inspo titles and check that they go to the correct inspo pages.
+    - Try and delete an inspo and check that the delete modal appears, asking the superuser if they are sure they
+    want to delete the inspo.  
 
 #### Register Page
 
@@ -183,7 +199,7 @@ All steps on desktop were repeated in browsers: Firefox, Chrome and Internet Exp
 
 - Attempt to log in with a username not in the database, confirm the relevant error message is shown.
 - Attempt to log in with a correct username but wrong password, confirm the relevant error message is shown.
-- Log in with a correct username and password, confirm that the user is logged in and that they are redirected to the hoome page. 
+- Log in with a correct username and password, confirm that the user is logged in and that they are redirected to the home page. 
 
 #### Account Page
 
@@ -200,22 +216,22 @@ All steps on desktop were repeated in browsers: Firefox, Chrome and Internet Exp
 #### Log Out Page
 
 - Attempt to log out and ensure the the user is taken to the log out page, asking if they are sure they want to log out.
-- Click cancel, and ensure tthat the user is redirected to the home page. 
+- Click cancel, and ensure that the user is redirected to the home page. 
 - Log out and and ensure that the user is redirected to the home page. 
 
-#### Cart Page
+#### Bag Page
 
-- Log in and go to the cart page with nothing in the cart. Confirm that the message "Your cart is empty!" is shown and the call to action button "Let's go shopping" is provided and that the checkout button is not displayed. 
-- Click the button and confirm it takes the user to the all items page.
-- Add items to the cart and return to the cart page, confirm that all items in the cart are displayed correctly, with the correct amounts requested by the user.
-- Adjust the quantity field, confirm that the shopping cart subtotal is updated to reflect the change.
-- Click the delete button on an item, confirm that the item removed from the cart.
-- Delete all items from the cart, confirm that the cart is empty. 
+- Log in and go to the bag page with nothing in the bag. Confirm that the message "Your bag is empty!" is shown and the call to action button "Keep shopping" is provided and that the checkout button is not displayed. 
+- Click the button and confirm it takes the user to the all products page.
+- Add products to the bag and return to the bag page, confirm that all products in the bag are displayed correctly, with the correct amounts requested by the user.
+- Adjust the quantity field, confirm that the shopping bag subtotal is updated to reflect the change.
+- Click the delete button on an product, confirm that the product is removed from the bag.
+- Delete all products from the bag, confirm that the bag is empty. 
 
 #### Checkout Pages
 
 - Go to the checkout page when not logged in to the site, confirm that the user is taken to the login page to sign in.
-- Confirm that the items are displayed correctly in the order summary, that the quantity, subtotal, and grand total are correct
+- Confirm that the products are displayed correctly in the order summary, that the quantity, subtotal, and grand total are correct
 - Try to send the form without all the required fields filled in. Confirm that the appropriate error message is given to the user.
 - Return to the payment page , use the stripe checkout test [card numbers](https://stripe.com/docs/testing) to check the various responses to different errors.
 - Make a successful payment. Confirm that the user is returned to checkout success page.
@@ -231,14 +247,14 @@ Responsive design was also tested in the Chrome Developer Tools device simulator
 1. Navbar 
     - Open the website on mobile, confirm that the navbar is collapsed into a burger icon
     - click the burger icon, confirm that the navbar list appears are expected.
-    - Add something to the cart, confirm that the user shopping cart grand total appears and displays correctly.
+    - Add something to the bag, confirm that the user shopping bag grand total appears and displays correctly.
 
 2. Footer
     - Scroll to the bottom of the page, confirm that the footer contents is displayed as expected with the bootstrap grid.
     - No content squashed or squeezed or disproportionate in size.
     - Confirm that all links and buttons in footer are easy to click with a finger on the smallest screen sizes.
 
-3. Pet pages
+3. Product pages
     - Confirm that the item list is displayed one on top of each other on mobile, and 3 or 2 to a row on tablet, depending on its size.
     - Confirm that all clicks and swipes operate as expected on touch screen.
 
