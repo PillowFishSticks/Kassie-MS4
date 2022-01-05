@@ -1,3 +1,4 @@
+<ul>
 <li class="list-inline-item">
       <a class="text-black nav-link d-block d-lg-none" href="#" id="mobile-search" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <div class="text-center">
@@ -20,7 +21,7 @@
           </form>
       </div>
   </li>
-  <div class="list-inline-item dropdown">
+  <li class="list-inline-item dropdown">
     <a class="text-black nav-link d-block d-lg-none" href="#" id="user-options-mobile" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <div class="text-center">
             <div><i class="fas fa-user fa-lg"></i></div>
@@ -40,8 +41,8 @@
             <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
         {% endif %}
     </div>
-</div>
-<div class="list-inline-item">
+</li>
+<li class="list-inline-item">
     <a class="{% if wishlist_count %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none" href="{% url 'view_product_wishlist' %}">
         <div class="text-center">
             <div><i class="fas fa-heart fa-lg"></i></div>
@@ -54,8 +55,8 @@
             </p>
         </div>
     </a>
-</div>
-<div class="list-inline-item">
+</li>
+<li class="list-inline-item">
     <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none" href="{% url 'view_bag' %}">
         <div class="text-center">
             <div><i class="fas fa-shopping-bag fa-lg"></i></div>
@@ -68,4 +69,5 @@
             </p>
         </div>
     </a>
-</div>
+</li>
+</ul>

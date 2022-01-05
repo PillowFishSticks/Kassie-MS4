@@ -31,6 +31,7 @@ profile.css | PASS
 
 HTML - Validated using [W3C](https://validator.w3.org/#validate_by_input) 
 - With an error found in reviews.html - a duplicate id, Reviews, was found in reviews.html. If one id is removed or changed, the content in that div is not displayed. I decided to leave tackling this bug for a future release. 
+- With an error found in manage_inspo_items.html - a duplicate id 'deleteInspoItem' was found. It occurs because there are six inspos in the manage inspo page and each of then as a delete modal with an id of 'deleteInspoItem'. This would mean each inspo would need a seperate id for the delete modal, thus I decided to leave it as is for the time being. 
 
 | Page | Test | 
 --- | --- | 
