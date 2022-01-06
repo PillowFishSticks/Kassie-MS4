@@ -1,12 +1,10 @@
 # Imports
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # 3rd party:
 from django import forms
 
 # Internal:
 from .models import Inspo
 from products.widgets import CustomClearableFileInput
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 class InspoForm(forms.ModelForm):
@@ -21,5 +19,3 @@ class InspoForm(forms.ModelForm):
         label='Image',
         required=False,
         widget=CustomClearableFileInput)
-
-

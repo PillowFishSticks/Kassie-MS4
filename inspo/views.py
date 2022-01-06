@@ -1,5 +1,4 @@
 # Imports
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # 3rd party:
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -9,7 +8,6 @@ from django.urls import reverse
 # Internal:
 from .forms import InspoForm
 from .models import Inspo
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 def inspo_items(request):
@@ -76,7 +74,8 @@ def add_inspo_item(request):
             form_data = inspo_form.save(commit=False)
             form_data.user = request.user
             form_data.save()
-            messages.success(request, 'Your inspo item was posted successfully!')
+            messages.success(
+                request, 'Your inspo item was posted successfully!')
             return redirect('inspo_items')
         else:
             messages.error(
@@ -108,12 +107,13 @@ def edit_inspo_item(request, inspo_item_id):
 
     inspo_item_to_edit = get_object_or_404(Inspo, pk=inspo_item_id)
     if request.method == 'POST':
-        inspo_form = InspoForm(request.POST, request.FILES,
-                             instance=inspo_item_to_edit)
+        inspo_form = InspoForm(
+            request.POST, request.FILES, instance=inspo_item_to_edit)
         if inspo_form.is_valid():
             inspo_form.save()
-            messages.success(request, f'{inspo_item_to_edit.title} '
-                                      f'was successfully updated')
+            messages.success(
+                request, f'{inspo_item_to_edit.title} '
+                f'was successfully updated')
             return redirect('manage_inspo_items')
         else:
             messages.error(
@@ -121,9 +121,9 @@ def edit_inspo_item(request, inspo_item_id):
                 was not successfully updated')
     else:
         inspo_form = InspoForm(instance=inspo_item_to_edit)
-        messages.info(request, f'You are currently editing '
-                               f'{inspo_item_to_edit.title}')
-
+        messages.info(
+            request, f'You are currently editing '
+            f'{inspo_item_to_edit.title}')
     template = 'inspo/edit_inspo_item.html'
     context = {
         'inspo_form': inspo_form,

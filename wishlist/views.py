@@ -51,7 +51,7 @@ def add_product_to_wishlist(request, item_id):
     product = get_object_or_404(Product, pk=item_id)
     wishlist = None
 
-    #wishlist = get_object_or_404(Wishlist, username=request.user)
+    # wishlist = get_object_or_404(Wishlist, username=request.user)
     try:
         wishlist = get_object_or_404(Wishlist, username=request.user)
     except Http404:
@@ -64,7 +64,6 @@ def add_product_to_wishlist(request, item_id):
         wishlist.products.add(product)
         messages.info(request, 'Added the product to your wishlist')
 
-   
     return redirect(reverse('product_detail', args=[item_id]))
 
 

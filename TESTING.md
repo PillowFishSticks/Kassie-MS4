@@ -48,7 +48,8 @@ cart.html | PASS
 
 Javascript - Validated using [JSHint Validator](https://jshint.com/) with no errors found.
 
-Python - Validated using [PEP 8](http://pep8online.com/) with no errors found.
+
+Python - Validated using [PEP 8](http://pep8online.com/) with no errors found with one exception: - ```settings.py``` (the Django settings file has a known issue, but is acceptable to not force a line break) - line too long (> 79 characters) - ```AUTH_PASSWORD_VALIDATORS = [{}]``` x 4
 
 ## User Stories Testing
 
@@ -319,4 +320,4 @@ Responsive design was also tested in the Chrome Developer Tools device simulator
 
 ## Further testing: 
 1. Asked friends and family to look at the site on their devices and report any issues they found.
-2. Petpals viewed on all devices and orientations available in Chrome DevTools. 
+2. Kassie viewed on all devices and orientations available in Chrome DevTools. 
