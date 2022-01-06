@@ -20,7 +20,6 @@ hr {
 
 /* Navbar */
 .navbar {
-    display: unset;
     background-color: #F6F6F6;
     
 }
@@ -28,7 +27,7 @@ hr {
 #topnav {
     background-color: #F6F6F6;
 }
-
+  
 /* ----- Footer ----- */
 #footer {
     background-color: #F6F6F6;
