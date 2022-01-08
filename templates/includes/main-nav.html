@@ -74,13 +74,10 @@
                 <a href="{% url 'products' %}?category=garden_tables,garden_chairs,garden_sofas" class="dropdown-item">All Garden</a>
             </div>
         </li>
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="sale-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <li class="nav-item">
+            <a class="logo-font font-weight-bold nav-link text-black" href="{% url 'products' %}?category=onsale" id="sale-link" aria-haspopup="true" aria-expanded="false">
                 On Sale
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="sale-link">
-                <a href="{% url 'products' %}?category=all_specials" class="dropdown-item">All Specials</a>
-            </div>
         </li>
         <li class="nav-item">
             <a class="logo-font font-weight-bold nav-link text-black" href="{% url 'inspo_items' %}" id="inspo_items" aria-haspopup="true" aria-expanded="false">
