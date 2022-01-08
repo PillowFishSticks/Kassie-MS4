@@ -48,7 +48,8 @@
             <ul>
                 {% if request.user.is_authenticated %}
                 {% if request.user.is_superuser %}
-                <li class="footer-item"><a href="{% url 'add_product' %}">Item Management</a></li>
+                <li class="footer-item"><a href="{% url 'add_product' %}">Product Management</a></li>
+                <li class="footer-item"><a href="{% url 'manage_inspo_items' %}">Inspo Management</a></li>
                 {% endif %}
                 <li class="footer-item"><a href="{% url 'profile' %}">My Profile</a></li>
                 <li class="footer-item"><a href="{% url 'account_logout' %}">Logout</a></li>
