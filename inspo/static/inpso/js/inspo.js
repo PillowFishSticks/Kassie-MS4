@@ -1,6 +1,6 @@
 /**
- * [inspo images
- * Credit: Code Institute project Boutique Ado ]
+ * inspo images
+ * Credit: Code Institute project Boutique Ado
  */
  $('#new-image').change(function() {
     var file = $('#new-image')[0].files[0];

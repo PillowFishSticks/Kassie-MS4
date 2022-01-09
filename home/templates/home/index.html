@@ -4,99 +4,99 @@
 {% block content %}
 <!-- Home banner -->
 <section class="text-center container-fluid">
-    <div class="row">
-      <div class="col-12 col-md-4 d-md-block home-banner mt-5">
-        <div class="mt-5">
-          <h1>Want to decorate?</h1>
-          <p>Browse through our collection of furniture</p>
-        </div>
-        <div>
-          <a href="{% url 'products' %}" class="btn btn-black btn-lg">
-            Shop Now
-          </a>
-        </div>
+  <div class="row">
+    <div class="col-12 col-md-4 d-md-block home-banner mt-5">
+      <div class="mt-5">
+        <h1>Want to decorate?</h1>
+        <p>Browse through our collection of furniture</p>
       </div>
-      <div class="col-12 col-md-8 d-none d-md-block home-banner-image mt-5">
-        <a href="#">
-          <img src="{{ MEDIA_URL }}myhome.jpg" alt="Home banner">
+      <div>
+        <a href="{% url 'products' %}" class="btn btn-black btn-lg">
+          Shop Now
         </a>
       </div>
     </div>
+    <div class="col-12 col-md-8 d-none d-md-block home-banner-image mt-5">
+      <a href="#">
+        <img src="{{ MEDIA_URL }}myhome.jpg" alt="Home banner">
+      </a>
+    </div>
+  </div>
 </section>
 <!-- models -->
 <section>
-    <div class="row modalbanner text-center mb-5">
-        <div class="col-4 mt-3">
-            <div>
-                <h5 class="pointer" data-bs-toggle="modal" data-bs-target="#Modal-1">
-                    <i class="far fa-money-bill-alt"></i>
-                    Free delivery over $200
-                </h5>
-            </div>
-        </div>
-        <div class="col-4 mt-3">
-            <div>
-                <h5 class="pointer" data-bs-toggle="modal" data-bs-target="#Modal-2">
-                    <i class="fas fa-box"></i>
-                    Home installation
-                </h5>
-            </div>
-        </div>
-        <div class="col-4 mt-3">
-            <div>
-                <h5 class="pointer" data-bs-toggle="modal" data-bs-target="#Modal-3">
-                    <i class="fas fa-people-carry"></i>
-                    Lifetime warranty
-                </h5>
-            </div>
-        </div>
+  <div class="row modalbanner text-center mb-5">
+    <div class="col-4 mt-3">
+      <div>
+        <h5 class="pointer" data-bs-toggle="modal" data-bs-target="#Modal-1">
+          <i class="far fa-money-bill-alt"></i>
+          Free delivery over $200
+        </h5>
+      </div>
     </div>
-    <!-- modals popup 1 -->
-    <div class="modal fade" id="Modal-1" tabindex="-1" aria-labelledby="Modal-1" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title"><i class="far fa-money-bill-alt"></i> Free Delivery over $200</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              If you spend $200 or more we will deliver your goods for free!
-            </div>
-          </div>
-        </div>
+    <div class="col-4 mt-3">
+      <div>
+        <h5 class="pointer" data-bs-toggle="modal" data-bs-target="#Modal-2">
+          <i class="fas fa-box"></i>
+          Home installation
+        </h5>
+      </div>
     </div>
-    <!-- modals popup 2 -->
-    <div class="modal fade" id="Modal-2" tabindex="-1" aria-labelledby="Modal-2" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title"><i class="fas fa-box"></i> Home installation</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              When ordering products, please let us know if you need home installation for certain prodducts. 
-              This service does come at a fee. 
-            </div>
-          </div>
-        </div>
+    <div class="col-4 mt-3">
+      <div>
+        <h5 class="pointer" data-bs-toggle="modal" data-bs-target="#Modal-3">
+          <i class="fas fa-people-carry"></i>
+          Lifetime warranty
+        </h5>
+      </div>
     </div>
-    <!-- modals popup 2 -->
-    <div class="modal fade" id="Modal-3" tabindex="-1" aria-labelledby="Modal-3" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title"><i class="fas fa-people-carry"></i> Lifetime warranty</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              Kick back, relax, and enjoy your Joybird pieces - each one of our manufactured pieces comes 
-              with a lifetime warranty on all foundational elements.
-            </div>
-          </div>
+  </div>
+  <!-- modals popup 1 -->
+  <div class="modal fade" id="Modal-1" tabindex="-1" aria-labelledby="Modal-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title"><i class="far fa-money-bill-alt"></i> Free Delivery over $200</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
+        <div class="modal-body">
+          If you spend $200 or more we will deliver your goods for free!
+        </div>
+      </div>
     </div>
+  </div>
+  <!-- modals popup 2 -->
+  <div class="modal fade" id="Modal-2" tabindex="-1" aria-labelledby="Modal-2" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title"><i class="fas fa-box"></i> Home installation</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          When ordering products, please let us know if you need home installation for certain prodducts.
+          This service does come at a fee.
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- modals popup 3 -->
+  <div class="modal fade" id="Modal-3" tabindex="-1" aria-labelledby="Modal-3" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title"><i class="fas fa-people-carry"></i> Lifetime warranty</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Kick back, relax, and enjoy your Joybird pieces - each one of our manufactured pieces comes
+          with a lifetime warranty on all foundational elements.
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
-
+<!-- Inspo -->
 <section class="container-fluid">
   <div class="row">
     <h4>Get your weekly fix of style inspo</h4>
@@ -104,51 +104,51 @@
   <div class="row">
     <div class="col-sm-12 col-md-6 col-lg-4 mb-5">
       <div class="mt-3">
-          <div>
-            <a href="#">
-              <img class="inspo-card-home" src="{{ MEDIA_URL }}inspo2.png" alt=""/>
-            </a>    
-          </div>
-          <div>
-            <a class="inspo-title" href="{% url 'inspo_item' 6 %}">A touch of love is all it takes
-            </a>
-          </div>
+        <div>
+          <a href="#">
+            <img class="inspo-card-home" src="{{ MEDIA_URL }}inspo2.png" alt="" />
+          </a>
+        </div>
+        <div>
+          <a class="inspo-title" href="{% url 'inspo_item' 6 %}">A touch of love is all it takes
+          </a>
+        </div>
       </div>
     </div>
     <div class="col-sm-12 col-md-6 col-lg-4 mb-5">
       <div class="mt-3">
-          <div>
-            <a href="#">
-              <img class="inspo-card-home" src="{{ MEDIA_URL }}inspo6.png" alt=""/>
-            </a>    
-          </div>
-          <div>
-            <a class="inspo-title" href="{% url 'inspo_item' 11 %}">A dining room that’s ready for everything</a>
-          </div>
+        <div>
+          <a href="#">
+            <img class="inspo-card-home" src="{{ MEDIA_URL }}inspo6.png" alt="" />
+          </a>
+        </div>
+        <div>
+          <a class="inspo-title" href="{% url 'inspo_item' 11 %}">A dining room that’s ready for everything</a>
+        </div>
       </div>
     </div>
     <div class="col-sm-12 col-md-6 col-lg-4 mb-5 d-lg-none">
       <div class="mt-3">
-          <div>
-            <a href="#">
-              <img class="inspo-card-home" src="{{ MEDIA_URL }}inspo5.png" alt=""/>
-            </a>    
-          </div>
-          <div>
-            <a class="inspo-title" href="{% url 'inspo_item' 10 %}">A smart, small home workspace in the hallway</a>
-          </div>
+        <div>
+          <a href="#">
+            <img class="inspo-card-home" src="{{ MEDIA_URL }}inspo5.png" alt="" />
+          </a>
+        </div>
+        <div>
+          <a class="inspo-title" href="{% url 'inspo_item' 10 %}">A smart, small home workspace in the hallway</a>
+        </div>
       </div>
     </div>
     <div class="col-sm-12 col-md-6 col-lg-4 mb-5">
       <div class="mt-3">
-          <div>
-            <a href="#">
-              <img class="inspo-card-home" src="{{ MEDIA_URL }}inspo4.png" alt=""/>
-            </a>    
-          </div>
-          <div>
-            <a class="inspo-title" href="{% url 'inspo_item' 9 %}">A serene green bedroom</a>
-          </div>
+        <div>
+          <a href="#">
+            <img class="inspo-card-home" src="{{ MEDIA_URL }}inspo4.png" alt="" />
+          </a>
+        </div>
+        <div>
+          <a class="inspo-title" href="{% url 'inspo_item' 9 %}">A serene green bedroom</a>
+        </div>
       </div>
     </div>
   </div>
@@ -160,7 +160,7 @@
     </div>
   </div>
 </section>
-
+<!--On sale -->
 <section class="text-center container-fluid">
   <div class="row">
     <div class="col-12 col-md-5 d-none d-md-block onsale-banner-image mt-5">
@@ -178,7 +178,7 @@
           Shop Now
         </a>
       </div>
-     
+
     </div>
   </div>
 </section>
@@ -230,6 +230,4 @@
     </div>
   </div>
 </section>
-
-
 {% endblock %}
