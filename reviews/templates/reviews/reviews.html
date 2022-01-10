@@ -1,82 +1,84 @@
 {% if reviews.count > 0 %}
-    {% for review in reviews %}
-        <div id="Reviews" class="tabcontent col-12 col-lg-8 offset-lg-2 mb-3">
-            <h4 class="mt-3">{{ review.title }}</h4>
-            <p class="user-review"> By {{ review.user }} on {{ review.date_created }}</p>
-            <p>{{ review.description }}</p>  
-            <hr>
-                {% if request.user.username == review.user.user.username %}
-                <div class="mt-2">
-                    <button type="button" class="btn btn-info mb-3" data-bs-toggle="modal" data-bs-target="#editReview">
-                        Edit
-                      </button>                      
-                      <button type="button" class="btn btn-danger mb-3" data-bs-toggle="modal" data-bs-target="#deleteReview">
-                        Delete
-                      </button>                      
-                </div> 
-                <div class="modal fade" id="editReview" tabindex="-1" role="dialog" aria-labelledby="editReviewLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h4 class="modal-title" id="editReviewLabel">Edit Review</h4>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div>
-                                <div class="modal-body">
-                                    <form action="{% url 'edit_review' review.pk %}" method="POST" enctype="multipart/form-data">
-                                        {% csrf_token %}
-                                        {{ edit_review_form|crispy }}
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                        <button type="submit" class="btn btn-blue ml-2">Submit</button>
-                                    </form> 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+{% for review in reviews %}
+<div id="Reviews" class="tabcontent col-12 col-lg-8 offset-lg-2 mb-3">
+    <h4 class="mt-3">{{ review.title }}</h4>
+    <p class="user-review"> By {{ review.user }} on {{ review.date_created }}</p>
+    <p>{{ review.description }}</p>
+    <hr>
+    {% if request.user.username == review.user.user.username %}
+    <div class="mt-2">
+        <button type="button" class="btn btn-info mb-3" data-bs-toggle="modal" data-bs-target="#editReview">
+            Edit
+        </button>
+        <button type="button" class="btn btn-danger mb-3" data-bs-toggle="modal" data-bs-target="#deleteReview">
+            Delete
+        </button>
+    </div>
+    <div class="modal fade" id="editReview" tabindex="-1" role="dialog" aria-labelledby="editReviewLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="editReviewLabel">Edit Review</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal fade" id="deleteReview" tabindex="-1" role="dialog" aria-labelledby="deleteReviewLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title" id="deleteReviewLabel">Delete review</h4>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <h5>Are you sure you want to delete your review?</h5>
-                        </div>
-                        <div class="modal-footer">
+                <div>
+                    <div class="modal-body">
+                        <form action="{% url 'edit_review' review.pk %}" method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            {{ edit_review_form|crispy }}
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <a class="btn btn-danger ml-2" href="{% url 'delete_review' review.pk %}">Delete</a>
-                        </div>
+                            <button type="submit" class="btn btn-blue ml-2">Submit</button>
+                        </form>
                     </div>
                 </div>
-                </div>                                                                                        
-                </div>      
-                {% endif %}                    
-    {% endfor %}    
-{% else %}    
-    <div id="Reviews" class="tabcontent mb-3">
-        <p class="mt-3">There are no reviews for this product yet</p>  
-        <hr>   
-    </div>          
-{% endif %}                 
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="deleteReview" tabindex="-1" role="dialog" aria-labelledby="deleteReviewLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="deleteReviewLabel">Delete review</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5>Are you sure you want to delete your review?</h5>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <a class="btn btn-danger ml-2" href="{% url 'delete_review' review.pk %}">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endfor %}
+{% else %}
+<div id="Reviews" class="tabcontent mb-3">
+    <p class="mt-3">There are no reviews for this product yet</p>
+    <hr>
+</div>
+{% endif %}
 
 <div id="Write_a_review" class="tabcontent col-12 col-lg-8 offset-lg-2 mb-3">
     {% if request.user.is_authenticated and review_form != None %}
-        <form class="form mt-3" action="{% url 'add_review' product.pk %}" method="POST">
-            {% csrf_token %}
-            {{ review_form|crispy }}
-                <button id="submit-review-button" class="btn btn-black mt-2 mb-2">
-                    Submit
-                </button>                   
-        </form>
-        <hr>
+    <form class="form mt-3" action="{% url 'add_review' product.pk %}" method="POST">
+        {% csrf_token %}
+        {{ review_form|crispy }}
+        <button id="submit-review-button" class="btn btn-black mt-2 mb-2">
+            Submit
+        </button>
+    </form>
+    <hr>
     {% elif request.user.is_authenticated and review_form == None %}
-        <p class="mt-3">You have already reviewed this product!</p>  
-        <hr>            
-    {% else %}  
-        <p class="mt-3">Please log in or sign up to leave a review</p>
-        <a class="btn btn-outline-black mb-4" href="{% url 'account_login' %}">Log In</a>
-        <a class="btn btn-outline-black mb-4" href="{% url 'account_signup' %}">Sign Up</a>              
+    <p class="mt-3">You have already reviewed this product!</p>
+    <hr>
+    {% else %}
+    <p class="mt-3">Please log in or sign up to leave a review</p>
+    <a class="btn btn-outline-black mb-4" href="{% url 'account_login' %}">Log In</a>
+    <a class="btn btn-outline-black mb-4" href="{% url 'account_signup' %}">Sign Up</a>
     {% endif %}
 </div>

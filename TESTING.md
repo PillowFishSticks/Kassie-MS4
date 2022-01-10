@@ -270,47 +270,12 @@ Responsive design was also tested in the Chrome Developer Tools device simulator
 1. **Was getting the following error on the console**
 
 <div align="center">
-    <img src="/static/images/readme/console-error.png" target="_blank" rel="noopener" alt="console error"               aria-label="console error"/>
+    <img src="/media/readme/readme/console-error.png" target="_blank" rel="noopener" alt="console error"               aria-label="console error"/>
 </div>
-
-
-    ```js
-    document.getElementById("defaultOpen").click();
-    }
-    ```
-
-    was changed to
-
-
-    ```js
-    if (document.getElementById("openDefault")) {
-        const element = document.getElementById("defaultOpen").click();
-    }
-    ```
 
 2. **Secret keys were not being read by gitpod** 
     - Secret keys were not being read by gitpod, despite being added as gitpod variables. 
     - Created an env.py file to store the secret keys in. 
-
-3. **Tab in item details was not changing tabs** 
-    - Tab in items details was not changing tabs, all content was displaying the the first tab. 
-    - JS was in a link tag and loading as a style sheet as follows:
-
-
-    ```html
-    <link rel="stylesheet" href="{% static 'js/scripts.js' %}">
-    ```
-
-    was changed to 
-
-
-    ```html
-    <script src="{% static 'js/scripts.js' %}"></script>
-    ```
-
-4. **Reptile tag buttons were not displaying at the top of the reptile page**
-    - This was because friendly_name and Name were written incorrectly. 
-
 
 ### Unsolved bugs
 
