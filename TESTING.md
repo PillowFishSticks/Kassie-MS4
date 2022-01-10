@@ -277,6 +277,9 @@ Responsive design was also tested in the Chrome Developer Tools device simulator
     - Secret keys were not being read by gitpod, despite being added as gitpod variables. 
     - Created an env.py file to store the secret keys in. 
 
+3. **The heart for the wishlist was not turning red** 
+    - The product heart for the wishlist was not turning red once that product had been added to the wishlist. 
+
 ### Unsolved bugs
 
 1. **Duplicate id in reviews.html**
