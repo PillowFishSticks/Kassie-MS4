@@ -270,7 +270,7 @@ Responsive design was also tested in the Chrome Developer Tools device simulator
 1. **Was getting the following error on the console**
 
 <div align="center">
-    <img src="/media/readme/readme/console-error.png" target="_blank" rel="noopener" alt="console error"               aria-label="console error"/>
+    <img src="/media/readme/console-error.png" target="_blank" rel="noopener" alt="console error"               aria-label="console error"/>
 </div>
 
 2. **Secret keys were not being read by gitpod** 

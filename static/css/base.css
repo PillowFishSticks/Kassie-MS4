@@ -18,7 +18,7 @@ hr {
     text-align: center;
 }
 
-/* Navbar */
+/* ----- Navbar ----- */
 .navbar {
     background-color: #F6F6F6;
     
@@ -75,19 +75,56 @@ footer a i:hover {
     text-decoration: none;
 }
 
-/* Style the review dropdown button */
-#review-options,
-#no-reviews {
-    color: #ccc;
+/* Allauth form formatting */ 
+.allauth-form-inner-content p {
+    margin-top: 1.5rem; /* mt-4 */
+    color: #6c757d; /* text-secondary */
+ }
+  
+.allauth-form-inner-content input {
+    border-color: #000;
+    border-radius: 0;
 }
- 
-#review-options:hover,
-#review-options:active,
-#review-options:focus {
-    color: #FFD700;
+  
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+  
+.allauth-form-inner-content input::placeholder {
+    color: #aab7c4;
+}
+  
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type='submit'] {
+      /* btn */
+    display: inline-block;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #000;
+    border: 1px solid #000;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0;
+  
+    /* standard bootstrap btn transitions */
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+  
+.allauth-form-inner-content button:hover,
+.allauth-form-inner-content input[type='submit']:hover {	
+    color: #fff;
+    background-color: #222;
+    border-color: #222;
 }
 
-/* banner homepage */
+/* ----- Home Page ----- */
 .home-banner {
     background-color: rgb(3, 106, 120);
     justify-content: center;
@@ -120,8 +157,8 @@ footer a i:hover {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-      background: white;
-      color: black;
+    background: white;
+    color: black;
 }
 
 .btn-outline-black {
@@ -135,8 +172,8 @@ footer a i:hover {
 .btn-outline-black:hover,
 .btn-outline-black:active,
 .btn-outline-black:focus {
-      background: #222;
-      color: white;
+    background: #222;
+    color: white;
 }
 
 .shop-now-button:hover,
@@ -190,7 +227,6 @@ footer a i:hover {
 }
 
 /* modals homepage */
-
 .modalbanner {
     background-color: #F6F6F6;
     width: 100%;
@@ -224,7 +260,6 @@ input[name='q']::placeholder {
 }
 
 /* buttons homepage */
-
 .imagebuttons {
     height: 130px;
     width: 170px;
@@ -237,7 +272,7 @@ input[name='q']::placeholder {
     text-decoration: none;
 }
 
-/* products badeges */
+/* ----- Products Page ----- */
 a.category-badge > span.badge:hover {
     background: black !important;
     color: white !important;
@@ -251,6 +286,35 @@ a.category-badge > span.badge:hover {
     color: #800020;
 }
 
+/* Product Form */
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-checkbox .custom-control-label::before {
+    border-radius: 0;
+    border-color: #dc3545;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    border-radius: 0;
+}
+
+/* ----- Products Detail Page ----- */
 /* Style the tab */
 .tab {
     overflow: hidden;
@@ -287,7 +351,8 @@ a.category-badge > span.badge:hover {
     border-top: none;
   }
 
-/* toasts */
+
+/* ----- Toasts ----- */
 .message-container {
     position: fixed;
     top: 72px;
@@ -303,167 +368,13 @@ a.category-badge > span.badge:hover {
     height: 2px;
 }
 
-/* --- Shopping bag --- */
+/* --- Shopping Bag --- */
 .bag-notification-wrapper {
     height: 100px;
     overflow-x: hidden;
     overflow-y: auto;
 }
 
-/* --- wishlist --- */
-
-.wishlist {
-    font-size: 1.6rem;
-    padding-left: 15px;
-}
-.wishlist-remove {
-    cursor: pointer;
-}
-
-.inspo-title {
-    text-decoration: none;
-    color: black;
-    font-size: 18px;
-    padding-bottom: 20px;
-}
-
-.inspo-title:hover {
-    color: black;
-    text-decoration: underline;
-}
-
-.add-inspo a {
-    text-align: right;
-}
-
-/* -------------------------------- Media Queries */
-
-/* -------------------------------- Media Queries */
-
-/* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
-    .container {
-      max-width: 80%;
-    }
-}
-  
-  /* Allauth form formatting */
-  
-.allauth-form-inner-content p {
-    margin-top: 1.5rem; /* mt-4 */
-    color: #6c757d; /* text-secondary */
- }
-  
-.allauth-form-inner-content input {
-    border-color: #000;
-    border-radius: 0;
-}
-  
-.allauth-form-inner-content label:not([for='id_remember']) {
-    display: none;
-}
-  
-.allauth-form-inner-content input::placeholder {
-    color: #aab7c4;
-}
-  
-.allauth-form-inner-content button,
-.allauth-form-inner-content input[type='submit'] {
-      /* btn */
-    display: inline-block;
-    font-weight: 400;
-    color: #fff;
-    text-align: center;
-    vertical-align: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-color: #000;
-    border: 1px solid #000;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: 0;
-  
-    /* standard bootstrap btn transitions */
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
-  
-.allauth-form-inner-content button:hover,
-.allauth-form-inner-content input[type='submit']:hover {	
-    color: #fff;
-    background-color: #222;
-    border-color: #222;
-}
-
-/* Product Form */
-
-.btn-file {
-    position: relative;
-    overflow: hidden;
-}
-
-.btn-file input[type="file"] {
-    position: absolute;
-    top: 0;
-    right: 0;
-    min-width: 100%;
-    min-height: 100%;
-    opacity: 0;
-    cursor: pointer;
-}
-
-.custom-checkbox .custom-control-label::before {
-    border-radius: 0;
-    border-color: #dc3545;
-}
-
-.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
-    background-color: #dc3545;
-    border-color: #dc3545;
-    border-radius: 0;
-}
-
-/* --- inspo page --- */
-.card-img-top {
-    height: 300px;
-    border: 0;
-    margin: auto;
-    margin-bottom: 10px;
-}
-
-.inspo-items {
-    background-color: whitesmoke;
-}
-
-.inspo-card {
-    width: 550px;
-    border: 0;
-    margin: auto;
-    margin-bottom: 10px;
-}
-
-.inspo-card-home {
-    width: 450px;
-    border: 0;
-    margin: auto;
-    margin-bottom: 10px;
-}
-
-.inspo-card-img-top {
-    width: 400px ;
-    height: 400px ;
-    border: 0;
-    margin: auto;
-    margin-bottom: 10px;
-}
-/* --- inspo item --- */
-.inspo-detail {
-    width: 600px ;
-    height: auto ;
-}
-/* --- Shopping bag --- */
 .bag-notification-wrapper {
     height: 100px;
     overflow-x: hidden;
@@ -519,14 +430,86 @@ font-size: 14px;
 .cart-footer-row{
 margin: 2rem 0;
 }
-/* ----- End of Styling ----- */
-/* ----- Start of Media Queries ----- */
-/* --- Greater than 1200px --- */
+
+/* --- Wishlist --- */
+.wishlist {
+    font-size: 1.6rem;
+    padding-left: 15px;
+}
+
+.wishlist-remove {
+    cursor: pointer;
+}
+
+.inspo-title {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    padding-bottom: 20px;
+}
+
+.inspo-title:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.add-inspo a {
+    text-align: right;
+}
+
+/* --- inspo page --- */
+.card-img-top {
+    height: 300px;
+    border: 0;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.inspo-items {
+    background-color: whitesmoke;
+}
+
+.inspo-card {
+    width: 550px;
+    border: 0;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.inspo-card-home {
+    width: 450px;
+    border: 0;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.inspo-card-img-top {
+    width: 400px ;
+    height: 400px ;
+    border: 0;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+/* --- inspo item --- */
+.inspo-detail {
+    width: 600px ;
+    height: auto ;
+}
+
+
+/* -------------------------------- Media Queries */
+@media (min-width: 1200px) {
+    .container {
+      max-width: 80%;
+    }
+}
+
 @media screen and (max-width: 1200px) {
     .container {
       max-width: 80%;
     }
-    /* --- inspo --- */
+
     .inspo-card {
         width: 300px;
     }
@@ -537,7 +520,6 @@ margin: 2rem 0;
     }
   }
 
-/* fixed top navbar only on medium and up */
 @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait)  {
     .inspo-card-home {
         width: 300px;
