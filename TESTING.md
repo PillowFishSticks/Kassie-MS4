@@ -242,6 +242,8 @@ All steps on desktop were repeated in browsers: Firefox, Chrome and Internet Exp
 ### Testing undertaken on tablet and phone devices
 All steps below were repeated to test mobile and tablet specific elements on my Samsung phone and tablet, in both the firefox browser and samsung internet browser.
 
+All steps below were repeated to test mobile and tablet specific elements on iPhone 6, 7, 8, iPad, and iPad Pro.
+
 Responsive design was also tested in the Chrome Developer Tools device simulators on all options and orientations.
 
 #### Elements on every page
