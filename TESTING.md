@@ -240,11 +240,13 @@ All steps on desktop were repeated in browsers: Firefox, Chrome and Internet Exp
 - Check that the checkout success page loads all item and delivery information correctly. 
 
 ### Testing undertaken on tablet and phone devices
-All steps below were repeated to test mobile and tablet specific elements on my Samsung phone and tablet, in both the firefox browser and samsung internet browser.
-
 All steps below were repeated to test mobile and tablet specific elements on iPhone 6, 7, 8, iPad, and iPad Pro.
 
-Responsive design was also tested in the Chrome Developer Tools device simulators on all options and orientations.
+- Check that different page sections are stacked on top of one another.
+- Responsive design was also tested in the Chrome Developer Tools device simulators on all options and orientations.
+- Check that all buttons, and other elements are the correct proportions and easily clickable with a finger.
+- No content is squashed or squeezed or disproportionate in size.
+- Confirm that all clicks and swipes operate as expected on touch screen. 
 
 #### Elements on every page
 
@@ -281,6 +283,8 @@ Responsive design was also tested in the Chrome Developer Tools device simulator
 
 3. **The heart for the wishlist was not turning red** 
     - The product heart for the wishlist was not turning red once that product had been added to the wishlist. 
+    - The issue was that a manytomany list was used. 
+    - Changed to, if the item is in the list, then the "s_product_in_wishlist" variable can be set to true, and you can break out of the loop immediately
 
 4. **Favicon error** 
     - Kept getting a favicon error in the console. 
@@ -289,6 +293,7 @@ Responsive design was also tested in the Chrome Developer Tools device simulator
 5. **Ajust quantity in the bag** 
     - The quantity form in product_detail didn't allow input of decimal values (which was OK), but in the bag (adjust quantity) it did, triggerring an error upon bag update (as quantity needs to be an integer, not a float).
     - Used .requestSubmit(), in order to trigger the form validation beforehand.
+
 
 
     ```js
