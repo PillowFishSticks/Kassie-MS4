@@ -282,6 +282,35 @@ Responsive design was also tested in the Chrome Developer Tools device simulator
 3. **The heart for the wishlist was not turning red** 
     - The product heart for the wishlist was not turning red once that product had been added to the wishlist. 
 
+4. **Favicon error** 
+    - Kept getting a favicon error in the console. 
+    - Used the favicon website to add a favicon.  
+
+5. **Ajust quantity in the bag** 
+    - The quantity form in product_detail didn't allow input of decimal values (which was OK), but in the bag (adjust quantity) it did, triggerring an error upon bag update (as quantity needs to be an integer, not a float).
+    - Used .requestSubmit(), in order to trigger the form validation beforehand.
+
+
+    ```js
+     // Update quantity on click
+    $('.update-link').click(function (e) {
+        var form = $(this).prev('.update-form');
+        form.submit();
+    })
+    ```
+
+    was changed to
+
+
+    ```js
+     // Update quantity on click
+    $('.update-link').click(function (e) {
+        var form = $(this).prev('.update-form');
+        form[0].requestSubmit();
+    })
+    ```
+
+
 ### Unsolved bugs
 
 1. **Duplicate id in reviews.html**
