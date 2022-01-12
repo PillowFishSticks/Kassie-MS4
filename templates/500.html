@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-{% block extra_title %}404 error page{% endblock %}
+{% block extra_title %}500 error page{% endblock %}
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -15,9 +15,9 @@
 <div id="notfound">
 	<div class="notfound">
 		<div class="notfound-404">
-			<h1>404</h1>
+			<h1>500</h1>
 		</div>
-		<h2>We are sorry, page not found!</h2>
+		<h2>We are sorry, an error has occured!</h2>
 		<p>The page you are looking for might have been removed had its name changed or is unavailable.</p>
 		<!-- This button redirects users to the homepage -->
 		<a href="{% url 'home' %}">Back To Homepage</a>
