@@ -348,9 +348,8 @@ a.category-badge > span.badge:hover {
     display: inline;
     padding: 6px 12px;
     border: 1px solid #ccc;
-    border-top: none;
+    border-top: none
   }
-
 
 /* ----- Toasts ----- */
 .message-container {
