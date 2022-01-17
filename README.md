@@ -213,7 +213,7 @@ These wireframes were created using [Balsamiq](https://balsamiq.com/) during the
 
 #### Home Page
 
-- The home page displays a hoome banner with an image and some text with a 'Shop Now' button.
+- The home page displays a home banner with an image and some text with a 'Shop Now' button.
 - Below this, 'Get your weekly inspo' is displayed with three images and name links to the different inspo pages. 
 - An onsale banner is displayed below this, with an image and bright red banner with a 'Shop Now' button, that
 takes users to te specials page. 

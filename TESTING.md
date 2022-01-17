@@ -55,7 +55,7 @@ Python - Validated using [PEP 8](http://pep8online.com/) with no errors found wi
 
 The following section goes through the user stories identified in the [Ux section of README.md](README.md#UX) to check that the site meets those needs.
 
-**As a visitor to The House of Mouse website I expect/want/need:**
+**As a visitor to the Kassie website I expect/want/need:**
 
 1. **To easily find what I am looking for, I want the layout of the site to make sense so I am not confused or put off using it.**
     - Arrangement of site elements such as navbar, footer, icons, carousels, search, and forms conform to expected placement. Tag buttons are provided on pages where the user has moved deeper into the hierarchical data structure of the website to make it easier for the user to tell where they are.
@@ -74,7 +74,7 @@ The following section goes through the user stories identified in the [Ux sectio
     - The navbar has a collapsed menu for tablet and mobile viewing, this makes navigation easier for smaller devices.  
 
 1. **To be able to add products to a wishlist that I wish to purchase at a later time.**
-    - A heart appears next to each product on both the product page and product detail page, when clicked on, it adds
+    - A heart appears next to each product on the product detail page, when clicked on, it adds
     the product to th users wishlist. 
 
 1. **To be able to read reviews of items bought from previous customers, to build trust in my purchase.**
@@ -90,7 +90,7 @@ The following section goes through the user stories identified in the [Ux sectio
     - Attention has been paid to ensuring product images are clean,professional and responsive, never squashed or squeezed and that the users operation of the site pages work on all devices. Text is never too large or too small, buttons are always large enough to click with a finger easily on touch screen devices.
 
 1. **To be able to easily find out all the information I need to make an informed purchase. I expect information about the description, ingredients, and instructions where necessary.** 
-    - Information about the products description and dimensions are available on the products page, in a tab, below the image and add to bag section. The Tab displays information relevent to that product. 
+    - Information about the products description and dimensions are available on the products detail page, next to the product image. 
 
 1. **A text search function so that I can quickly narrow down my search when looking for something specific.**
     - A text search is available in the navbar. It searches through the product titles, description and tags to find the results for the user.
@@ -205,7 +205,7 @@ All steps on desktop were repeated in browsers: Firefox, Chrome and Internet Exp
 
 #### Account Page
 
-- Go to the account page of a newly created user. Confirm that te profile info form is populated with the users username and email address.
+- Go to the account page of a newly created user. Confirm that the profile info form is populated with the users username and email address.
 - Confirm that the first name and last name fields are also available.
 - Fill in the form with a non-email address, confirm that the applicable error is shown to the user
 - Fill in the form correctly, confirm that the "Your account info has been updated." message is shown to the user and that the reloaded form is now populated with the new data.
@@ -290,7 +290,7 @@ All steps below were repeated to test mobile and tablet specific elements on iPh
 3. **The heart for the wishlist was not turning red** 
     - The product heart for the wishlist was not turning red once that product had been added to the wishlist. 
     - The issue was that a manytomany list was used. 
-    - Changed to, if the item is in the list, then the "s_product_in_wishlist" variable can be set to true, and you can break out of the loop immediately
+    - Changed to, if the item is in the list, then the "is_product_in_wishlist" variable can be set to true, and you can break out of the loop immediately
 
 4. **Favicon error** 
     - Kept getting a favicon error in the console. 
