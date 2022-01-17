@@ -6,7 +6,8 @@
     <p>{{ review.description }}</p>
     <hr>
 </div>
-    {% if request.user.username == review.user.user.username %}
+{% if request.user.username == review.user.user.username %}
+
     <div class="mt-2">
         <button type="button" class="btn btn-info mb-3" data-bs-toggle="modal" data-bs-target="#editReview">
             Edit
@@ -27,7 +28,10 @@
                     <div class="modal-body">
                         <form action="{% url 'edit_review' review.pk %}" method="POST" enctype="multipart/form-data">
                             {% csrf_token %}
-                            {{ edit_review_form|crispy }}
+                            <label>Title:</label><br />
+                            <input type="text" name="title" value="{{ review.title }}"><br />
+                            <label>Description:</label><br />
+                            <textarea name="description">{{ review.description }}</textarea>
                             <button type="button" class="btn btn-secondary mt-3" data-bs-dismiss="modal">Close</button>
                             <button type="submit" class="btn  btn-info mt-3 ml-2">Submit</button>
                         </form>
