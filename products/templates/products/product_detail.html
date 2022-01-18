@@ -45,8 +45,8 @@
                 {% else %}
                 <p class="mb-0 mt-3 text-left item-price font-weight-bold">${{product.price }}</p>
                 {% endif %}
-                <p class="mt-3">{{ product.description }}</p>
-                <p class="mt-3">{{ product.dimensions|safe }}</p>
+                {{ product.description }}
+                {{ product.dimensions|safe }}
             </div>
             {% if request.user.is_superuser %}
             <div class="ml-3">
