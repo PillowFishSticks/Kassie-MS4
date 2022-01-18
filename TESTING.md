@@ -328,6 +328,10 @@ All steps below were repeated to test mobile and tablet specific elements on iPh
     - A duplicate id, Reviews, was found in reviews.html. If one id is removed or changed, the content in that div is not displayed. 
     - I decided to leave tackling this bug for a future release.
 
+2. **Duplicate id in reviews.html**
+    - A duplicate id 'deleteInspoItem' was found. It occurs because there are six inspos in the manage inspo page and each of then as a delete modal with an id of 'deleteInspoItem'. This would mean each inspo would need a seperate id for the delete modal.
+    - I decided to leave tackling this bug for a future release.
+
 ## Further testing: 
 1. Asked friends and family to look at the site on their devices and report any issues they found.
 2. Kassie viewed on all devices and orientations available in Chrome DevTools. 
