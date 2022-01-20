@@ -230,7 +230,7 @@ takes users to te specials page.
     - Price (Low - High)
     - Price (High - Low)
 
-#### ProductDetails Page
+#### Product Details Page
 
 - Product details include the product image, name, price, description, and dimensions. The description and dimensions  appear below the "Add to Bag" button, the dimensions are displayed in a table. The reviews tab appears below the dimensions. 
 - The reviews tab shows the reviews, which include the date created, review title, username of reviewer, and the review subject. 
@@ -275,9 +275,9 @@ takes users to te specials page.
 
 This project consists of the following 6 Django apps:
 
-- **Home** - Displays the PetPal home page
+- **Home** - Displays the Kassie home page
 
-- **Products** - Handles item display and individual item views
+- **Products** - Handles product display and individual prooduct views
 
     - Category Model - Stores the product categories
 
@@ -448,7 +448,7 @@ This project consists of the following 6 Django apps:
 ### Libraries
 - [JQuery](https://jquery.com) to simplify DOM manipulation.
 - [Bootstrap](https://www.bootstrapcdn.com/) to simplify the structure of the website and make the website responsive.
-- [FontAwesome](https://www.bootstrapcdn.com/fontawesome/) to provide icons for PetPals website. 
+- [FontAwesome](https://www.bootstrapcdn.com/fontawesome/) to provide icons for the Kassie website. 
 - [Google Fonts](https://fonts.google.com/) to style the website fonts.
 
 ### Languages

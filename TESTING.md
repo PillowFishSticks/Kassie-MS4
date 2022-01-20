@@ -241,7 +241,7 @@ All steps on desktop were repeated in browsers: Firefox, Chrome and Internet Exp
 
 #### 400, 403, 404, 500 error
 - Initiate an erorr that activates each of the error pages. 
-- Ensure that the user is redirected to the error page, stating that the page does not exist or that an error has ooccured and giving them the option to return to the home page.
+- Ensure that the user is redirected to the error page, stating that the page does not exist or that an error has occured and giving them the option to return to the home page.
 
 ### Testing undertaken on tablet and phone devices
 All steps below were repeated to test mobile and tablet specific elements on iPhone 6, 7, 8, iPad, and iPad Pro.
